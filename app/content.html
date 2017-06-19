@@ -1752,14 +1752,37 @@ var query = document.location.search,
 <div class="cookie-warning"><!--/* [D] When GNB is open, add the class 'gb-gnb-open' to body tag -->
 <div id="wrap">
 <!-- @Header (HTML) -->
+<script type="text/javascript">
+<!--
+    function toggle_visibility(header) {
+       var e = document.getElementById(header);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
+</script>
   <header id="header" role="banner">
+
+    
+    <!--googleon: all-->
   </header>
 <!-- //@Header (HTML) -->
     <div id="content" role="main">
 <!-- @Body(HTML) -->
     <!-- lnb -->
-    <div class="sticky">
-      <nav>
+
+    <div class="sticky" style="position: fixed !important;padding: 0px 0;">
+        <div class="s-skip-content">
+  <a href="#content" id="skipToContent">Skip to content</a>
+</div>
+<div class="cookie-notice js-cookie" id ="hideme" role="status" style="position: relative 8important; top: 0px !important;">
+        <p class="cookie-notice__desc">Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.</p>
+        <a href="http://www.samsung.com/fr/info/privacy/" class="cookie-notice__link">Vous pouvez en savoir plus ici</a>
+        <button type="button" class="cookie-notice__btn-close js-cookie-close" onclick="toggle_visibility('hideme');">Fermer</button>
+    </div>
+      <nav style="padding: 11px !important;">
         <h1 class="lnb-logo">
           <a href="./highlights.html" class="tf-logo " title="Aller à la page d'accueil" data-omnitag="h_the-frame"><img src="images/highlights/tf_logo.png" alt="Logo The Frame"></a>
         </h1>

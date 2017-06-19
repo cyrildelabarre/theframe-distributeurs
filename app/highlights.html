@@ -1,4 +1,6 @@
-<!--#include virtual="/fr/next/html/static/static_header1.html"-->
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title></title>
@@ -2795,7 +2797,18 @@ html.ie8 .scroll-guide:after {
 <div class="cookie-warning"><!--/* [D] When GNB is open, add the class 'gb-gnb-open' to body tag -->
 <div id="wrap">
 <!-- @Header (HTML) -->
-<!--#include virtual="/fr/next/html/static/static_header2.html"-->
+<header id="header" role="banner" style="display:none;">
+<div class="s-skip-content">
+  <a href="#content" id="skipToContent">Skip to content</a>
+</div>
+<div class="cookie-notice js-cookie" role="status">
+        <p class="cookie-notice__desc">Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.</p>
+        <a href="http://www.samsung.com/fr/info/privacy/" class="cookie-notice__link">Vous pouvez en savoir plus ici</a>
+        <button type="button" class="cookie-notice__btn-close js-cookie-close">Fermer</button>
+    </div>
+    
+    <!--googleon: all-->
+  </header>
 <!-- //@Header (HTML) -->
     <div id="content" role="main">
 <!-- @Body(HTML) -->
@@ -3308,4 +3321,5 @@ ga('create', 'UA-48481369-1', 'auto', {
 
 <script language="JavaScript" type="text/javascript" src="//www.samsung.com/fr/common/js/omni/aam_fr.js"></script>
 
-   <!--#include virtual="/fr/next/html/static/static_footer.html" -->
+    </body>
+</html>

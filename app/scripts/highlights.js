@@ -158,7 +158,21 @@ if (window._isExist) {
 
 })(document);
 
+$(document).ready(function() {
+    if(localStorage.getItem('popState') != 'shown'){
+        $("#header").delay(2000).fadeIn();
+        localStorage.setItem('popState','shown')
+    }
 
+    $('#header-close').click(function(e) // You are clicking the close button
+    {
+    $('#header').fadeOut(); // Now the pop up is hiden.
+    });
+    $('#header').click(function(e) 
+    {
+    $('#header').fadeOut(); 
+    });
+});
 
 
 /*
