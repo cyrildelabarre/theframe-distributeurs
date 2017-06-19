@@ -1,0 +1,242 @@
+
+#app {
+    background: grey;
+    div {
+        height: 200px;
+    }
+}
+
+.index {
+  background: red;
+}
+
+.test_css_background {
+  width: 300px;
+  height: 300px;
+  background-image: url('images/gear-360_access_01.gif');
+}
+
+.buynow {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(141, 89, 46);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  box-shadow: rgba(141, 89, 46, 0.54) 0px 4px 9px 0px;
+  direction: ltr;
+  display: block;
+  float: left;
+  font-family: SamsungSharpSans, arial;
+  font-size: 12px;
+  font-weight: bold;
+  height: 36px;
+  letter-spacing: 1.2px;
+  line-height: 36px;
+  margin-left: 20px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  text-align: center;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  width: 155.906px;
+}
+
+.buynow a {
+  color: rgb(255, 255, 255);
+  cursor: auto;
+  direction: ltr;
+  display: block;
+  font-family: SamsungSharpSans, arial;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+}
+
+.buynow a::before {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  content: "";
+  display: block;
+  height: 30px;
+  left: 77.9531px;
+  position: absolute;
+  top: 15px;
+  transform: matrix(1, 0, 0, 1, -78, -15);
+  transition-delay: 0s, 0s;
+  transition-duration: 0.3s, 0.3s;
+  transition-property: width, height;
+  transition-timing-function: ease-in-out;
+}
+
+.buynow a .cont {
+  color: rgb(255, 255, 255);
+  cursor: auto;
+  direction: ltr;
+  display: inline;
+  font-family: SamsungSharpSans, arial;
+  font-size: 12px;
+  font-weight: bold;
+  height: auto;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: color;
+  transition-timing-function: ease;
+  width: auto;
+  z-index: 10;
+}
+
+a button {
+  align-items: flex-start;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  border-bottom-color: rgb(141, 89, 46);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(141, 89, 46);
+  border-left-style: none;
+  border-left-width: 0px;
+  border-right-color: rgb(141, 89, 46);
+  border-right-style: none;
+  border-right-width: 0px;
+  border-top-color: rgb(141, 89, 46);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top-style: none;
+  border-top-width: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 24px 32px 0px;
+  box-sizing: border-box;
+  color: rgb(141, 89, 46);
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: SamsungSharpSans, arial;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: bold;
+  height: 44px;
+  letter-spacing: 4.14px;
+  line-height: 44px;
+  margin-bottom: 100px;
+  margin-left: 383.359px;
+  margin-right: 383.375px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-top: 0px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: none;
+  width: 370.266px;
+  word-spacing: 0px;
+  writing-mode: horizontal-tb;
+  z-index: 88;
+  -webkit-appearance: none;
+}
+
+a button::before {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(141, 89, 46);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  content: "";
+  display: block;
+  height: 0px;
+  left: 135.125px;
+  position: absolute;
+  top: 22px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-delay: 0s, 0s;
+  transition-duration: 0.3s, 0.3s;
+  transition-property: width, height;
+  transition-timing-function: ease-in-out;
+  width: 0px;
+}
+
+a button::before {
+  color: rgb(141, 89, 46);
+  cursor: pointer;
+  direction: ltr;
+  display: inline;
+  font-family: SamsungSharpSans, arial;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: bold;
+  height: auto;
+  letter-spacing: 4.14px;
+  line-height: 44px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: none;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: color;
+  transition-timing-function: ease;
+  width: auto;
+  word-spacing: 0px;
+  writing-mode: horizontal-tb;
+  z-index: 10;
+}
