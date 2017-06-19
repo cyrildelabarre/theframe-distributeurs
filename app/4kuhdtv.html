@@ -1529,7 +1529,7 @@ var query = document.location.search,
         <div class="s-skip-content">
   <a href="#content" id="skipToContent">Skip to content</a>
 </div>
-<div class="cookie-notice js-cookie" id ="hideme" role="status" style="position: relative 8important; top: 0px !important;">
+<div class="cookie-notice js-cookie" id ="hideme" role="status" style="position: relative !important; top: 0px !important;">
         <p class="cookie-notice__desc">Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.</p>
         <a href="http://www.samsung.com/fr/info/privacy/" class="cookie-notice__link">Vous pouvez en savoir plus ici</a>
         <button type="button" class="cookie-notice__btn-close js-cookie-close" onclick="toggle_visibility('hideme');">Fermer</button>
@@ -1553,7 +1553,15 @@ var query = document.location.search,
         </div>
       </nav>
     </div>
-
+<script>
+  if(typeof $.cookie("hideme") === 'undefined' || $.cookie("hideme") != "1") {
+      $("#hideme").html("My Banner");
+      $.cookie("hideme", "1");
+  }
+  window.addEventListener("beforeunload", function (e) {
+      $.removeCookie("hideme");
+  });
+</script>
         <div id="contents" class="entertainment_wrap">
             <div class="load_dimd" style="position:fixed; width:100%; height:100%; background:#fff; z-index:99999;top:0; left:0;"></div>
 
@@ -1846,6 +1854,7 @@ var query = document.location.search,
 
 </script>
 </div>
+
 
 <script src="scripts/4kuhdtv.js"></script>
 
