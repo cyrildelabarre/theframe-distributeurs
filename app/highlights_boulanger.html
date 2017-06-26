@@ -33,18 +33,10 @@ var query = document.location.search,
     font-size: 12px !important;
 }
 </style>
-<script>
-$(document).ready(function() {
-if (typeof $.cookie('tc_priv_ok') === 'undefined'){
- //no cookie
- var elem = document.getElementById("noshow");
- elem.parentElement.removeChild(elem);
-}
-   });  
-</script>
 
-<script id="noshow">
-window.addEventListener("load", function foo(){
+
+<script>
+window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
