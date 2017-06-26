@@ -1553,15 +1553,7 @@ var query = document.location.search,
         </div>
       </nav>
     </div>
-<script>
-  if(typeof $.cookie("hideme") === 'undefined' || $.cookie("hideme") != "1") {
-      $("#hideme").html("My Banner");
-      $.cookie("hideme", "1");
-  }
-  window.addEventListener("beforeunload", function (e) {
-      $.removeCookie("hideme");
-  });
-</script>
+
         <div id="contents" class="entertainment_wrap">
             <div class="load_dimd" style="position:fixed; width:100%; height:100%; background:#fff; z-index:99999;top:0; left:0;"></div>
 

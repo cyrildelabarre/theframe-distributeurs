@@ -25,8 +25,53 @@ var query = document.location.search,
          siteTitle="The Frame distributeurs";
 </script>
  <!-- /omniture -->
-
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
         
+<style>
+.cc-window {
+    font-size: 12px !important;
+}
+</style>
+<script>
+$(document).ready(function() {
+if (typeof $.cookie('tc_priv_ok') === 'undefined'){
+ //no cookie
+ var elem = document.getElementById("noshow");
+ elem.parentElement.removeChild(elem);
+}
+   });  
+</script>
+
+<script id="noshow">
+window.addEventListener("load", function foo(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#4b4c4c",
+      "text": "#cacaca",
+
+    },
+    "button": {
+      "background": "#FF5C00",
+      "text": "#FFF",
+    }
+  },
+  "position": "bottom",
+  "type": "opt-in",
+  "content": {
+    "message": "En poursuivant votre navigation, vous acceptez l’utilisation des cookies pour vous proposer des contenus et de la publicité ciblée adaptés à vos centres d’intérêt et réaliser des mesures pour améliorer votre expérience sur le site. Pour en savoir plus et gérer vos paramètres, cliquez ici ",
+    "dismiss": " ",
+    "allow": "ACCEPTER",
+    "link": "En savoir plus",
+    "href": "http://www.samsung.com/fr/info/privacy/"
+  }
+})});
+</script>
+
+
+
+
     </head>
     <body>
 
@@ -2810,24 +2855,24 @@ html.ie8 .scroll-guide:after {
   <div class="s-skip-content">
   <a href="#content" id="skipToContent">Skip to content</a>
 </div>
-<div class="cookie-notice js-cookie" id="hideme" role="status" style="position: relative !important; top: 0px !important; display:none;">
+<!-- <div class="cookie-notice js-cookie" id="hideme" role="status" style="position: relative !important; top: 0px !important; display:none;">
         <p class="cookie-notice__desc">Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.</p>
         <a href="http://www.samsung.com/fr/info/privacy/" class="cookie-notice__link">Vous pouvez en savoir plus ici</a>
         <button type="button" class="cookie-notice__btn-close js-cookie-close">Fermer</button>
-    </div>
+    </div> -->
     <nav style="padding: 11px !important;">
         <h1 class="lnb-logo">
-            <a href="./highlights.html" class="tf-logo " title="go to Highlights page" data-omnitag="h_the-frame"><img src="images/highlights/tf_logo.png" alt="The Frame Logo"></a>
+            <a href="./highlights_boulanger.html" class="tf-logo " title="go to Highlights page" data-omnitag="h_the-frame"><img src="images/highlights/tf_logo.png" alt="The Frame Logo"></a>
         </h1>
         <div class="lnb-item-wrap">
             <ul class="lnb-item-group">
-            <li class="lnb-item is-active"><a href="./highlights.html" title="Aller à la page d'accueil" data-omnitag="h_accueil">Accueil</a></li>
+            <li class="lnb-item is-active"><a href="./highlights_boulanger.html" title="Aller à la page d'accueil" data-omnitag="h_accueil">Accueil</a></li>
             <li class="lnb-item mob-col-3">
-            <a href="./content.html" title="Aller à la page Contenu" data-omnitag="h_contenu">Contenu</a></li>
+            <a href="./content_boulanger.html" title="Aller à la page Contenu" data-omnitag="h_contenu">Contenu</a></li>
             <li class="lnb-item mob-col-3 ">
-            <a href="./design.html" title="Aller à la page Design" data-omnitag="h_design">Design</a></li>
+            <a href="./design_boulanger.html" title="Aller à la page Design" data-omnitag="h_design">Design</a></li>
             <li class="lnb-item mob-col-3">
-            <a href="./4kuhdtv.html" title="Aller à la page TV UHD 4K" data-omnitag="h_tvuhd4k">TV UHD 4K</a></li>
+            <a href="./4kuhdtv_boulanger.html" title="Aller à la page TV UHD 4K" data-omnitag="h_tvuhd4k">TV UHD 4K</a></li>
           </ul>
             <span class="bar"></span>
             <span class="buynow"><a target="_blank" href="http://www.samsung.com/fr/theframe/shop/" class="fill--shadow" title="Ouvrir dans un nouvel onglet" data-omnitag="h_acheter"><span class="cont">ACHETER</span></a></span>
@@ -2926,7 +2971,7 @@ html.ie8 .scroll-guide:after {
             <div class="caption">
                 <h4 class="caption-title mask"><span class="paging">02</span><span>Contenu The Frame</span></h4>
                 <div class="title">Faites entrer l'art chez vous</div>
-                <span class="know_more"><a href="./content.html"  style="padding: 10px !important;" class="fill--brown link-btn" title="Ouvrir dans un nouvel onglet " data-omnitag="en-savoir-plus-contenu" title="Aller à la page Contenu" ><span class="cont know_button">En savoir plus</span><span class="arrow">&gt;</span></a></span>
+                <span class="know_more"><a href="./content_boulanger.html"  style="padding: 10px !important;" class="fill--brown link-btn" title="Ouvrir dans un nouvel onglet " data-omnitag="en-savoir-plus-contenu" title="Aller à la page Contenu" ><span class="cont know_button">En savoir plus</span><span class="arrow">&gt;</span></a></span>
                 
             </div>
         </article>
@@ -2951,7 +2996,7 @@ html.ie8 .scroll-guide:after {
                 <h4 class="caption-title mask"><span class="paging">03</span><span>Design The Frame</span></h4>
                 <div class="title">Un téléviseur au design élégant à chaque instant</div>
                 
-                 <span class="know_more2"><a href="./design.html"  style="padding: 10px !important;" class="fill--brown link-btn" title="Ouvrir dans un nouvel onglet " data-omnitag="en-savoir-plus-design" title="Aller à la page Contenu" ><span class="cont know_button2">En savoir plus</span><span class="arrow">&gt;</span></a></span>
+                 <span class="know_more2"><a href="./design_boulanger.html"  style="padding: 10px !important;" class="fill--brown link-btn" title="Ouvrir dans un nouvel onglet " data-omnitag="en-savoir-plus-design" title="Aller à la page Contenu" ><span class="cont know_button2">En savoir plus</span><span class="arrow">&gt;</span></a></span>
             </div>
         </article>
     </section>
