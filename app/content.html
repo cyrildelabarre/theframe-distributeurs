@@ -1748,6 +1748,58 @@ var query = document.location.search,
     <!--[if lt IE 9]>
         <script src="./common/js/modern.lib.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<style>
+.cc-window {
+    font-size: 13.5px !important;
+}
+.cc-color-override-1901237090.cc-window {
+background:#4b4c4c;
+  color:#FFF;
+}
+.cc-color-override-936484804 .cc-btn:hover, .cc-color-override-936484804 .cc-btn:focus{
+  background:#4b4c4c;
+}
+.cc-btn {
+  font-size: 1.2em !important;
+}
+.cc-color-override-936484804 .cc-link {
+  color: #FFF !important;
+  text-decoration: none;
+}
+.cc-banner .cc-message {
+    text-align: center !important;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+ "palette": {
+    "popup": {
+      "background": "#4b4c4c",
+      "text": "#cacaca",
+
+    },
+    "button": {
+      "background": "#4b4c4c",
+      "text": "#FFF",
+    }
+  },
+
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.",
+    "dismiss": " X",
+    "link": "Vous pouvez en savoir plus ici",
+    'text': "#FFF",
+    "href": "http://www.samsung.com/fr/info/privacy/"
+  }
+})});
+</script>
+
+
 </head>
 <div class="cookie-warning"><!--/* [D] When GNB is open, add the class 'gb-gnb-open' to body tag -->
 <div id="wrap">
@@ -1777,11 +1829,9 @@ var query = document.location.search,
         <div class="s-skip-content">
   <a href="#content" id="skipToContent">Skip to content</a>
 </div>
-<div class="cookie-notice js-cookie" id ="hideme" role="status" style="position: relative !important; top: 0px !important;">
-        <p class="cookie-notice__desc">Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.</p>
-        <a href="http://www.samsung.com/fr/info/privacy/" class="cookie-notice__link">Vous pouvez en savoir plus ici</a>
-        <button type="button" class="cookie-notice__btn-close js-cookie-close" onclick="toggle_visibility('hideme');">Fermer</button>
-    </div>
+<!-- <div class="cookie-notice js-cookie">
+        
+    </div> -->
       <nav style="padding: 11px !important;">
         <h1 class="lnb-logo">
           <a href="./highlights.html" class="tf-logo " title="Aller à la page d'accueil" data-omnitag="h_the-frame"><img src="images/highlights/tf_logo.png" alt="Logo The Frame"></a>
@@ -1811,7 +1861,66 @@ var query = document.location.search,
       <!-- // accessibility btn -->
 
             <!-- key visual -->
-            <section class="m_content_highlight_kv">
+<section class="m_content_highlight_kv">
+          <div class="scroll-guide fadeIn"><a href="#" aria-label="go to art mode" data-omni-type="microsite_pcontentinter" data-omni="vd mkt page_the frame:scroll to continue">Faites défiler&nbsp;<span>pour continuer</span></a></div>
+          <article class="m_feature-kv">
+              <div class="inner">
+                  <div class="text_box">
+                      <h2 class="tit"><span class="enter">Faites</span><span class="enter">entrer l'art</span> <span>chez vous</span></h2>
+                      <div class="play-ctrl">
+                        <button class="fill--brown play-btn circle" data-play-id="1" data-omni-type="microsite_usstyle" data-omni="vd mkt page_the frame:frame content:kv enhance your everyday space with art_video" style="opacity: 1;" title="FrameContent key visual"><span class="triangle">▷</span></button>
+                        <span class="cont" style="opacity: 1;"></span>
+                      </div>
+                  </div>    
+              </div>
+              <div class="f_container">
+                  <div class="kv_img">
+                    <figure>
+                       <img alt="The Frame sur une étagère dans un salon." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_01_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_01_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_01.jpg?$ORIGIN_JPG$">
+                    </figure>
+                    <figure class="android_loop">
+                       <img alt="Gros plan de The Frame suspendu au mur qui affiche une photo de famille parmi d'autres tableaux." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_02_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_02_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_02.jpg?$ORIGIN_JPG$">
+                    </figure>
+                    <figure class="android_loop">
+                       <img alt="The Frame vu du côté droit, suspendu au mur de la cuisine et affichant une peinture." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_03_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_03_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_03.jpg?$ORIGIN_JPG$">
+                    </figure>
+                    <figure class="android_loop">
+                       <img alt="The Frame sur le pied Studio affiche de l'art et est placé loin du mur." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_04_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_04_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_04.jpg?$ORIGIN_JPG$">
+                    </figure>
+                  </div>
+                  
+                  <figure class="kv_video">
+                    <video muted playsinline class="video-js vjs-default-skin" preload="auto" data-setup="{}">
+                      <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.mp4" type="video/mp4">
+                      <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.ogv" type="video/ogv">
+                      <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.webm" type="video/webm">
+                    </video>
+                    <figcaption>Vidéo de The Frame vu dans sous différents réglages, sur une étagère dans un salon, accroché au mur affichant une photo familiale avec d'autres cadres, sur un mur de cuisine affichant une peinture, sur son pied exposant une oeuvre et placé loin du mur.</figcaption>
+                  </figure>
+
+                  
+              </div>
+
+              <div class="bg lft"></div>
+              <div class="bg rgh"></div>
+              <div class="bg btm"></div>
+          </article>
+      </section>
+
+
+          <!--   <section class="m_content_highlight_kv">
           <div class="scroll-guide fadeIn"><a href="#" aria-label="go to art mode">Faites défiler&nbsp;<span>pour continuer</span></a></div>
           <article class="m_feature-kv">
               <div class="inner">
@@ -1867,7 +1976,7 @@ var query = document.location.search,
               <div class="bg rgh"></div>
               <div class="bg btm"></div>
           </article>
-      </section>
+      </section> -->
 
             <section class="m_content_artmode art_mode_area">
         <article class="m_feature-mf1">

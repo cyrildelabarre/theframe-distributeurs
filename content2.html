@@ -1,0 +1,2699 @@
+
+<!doctype html>
+<!--<Deject>-->
+<!--#include virtual="/fr/next/html/static/static_p5_top.html"-->
+<!--</Deject>-->
+<!-- smoosh -->
+<!-- build:css /styles/main-design.css -->
+<link rel="stylesheet" href="styles/main-content.css">
+<!-- endbuild -->
+
+    <style>
+#footer, .cm-g-gnb {display:none !important;}
+      @charset "UTF-8";
+        .theframe_wrap {overflow:hidden;}
+         html { overflow-x: hidden; }
+        .cm-g-static-content {overflow: visible !important;}
+        .cookie-notice {z-index: 1000;}
+        .s-gotop-wrap.s-show {display: none !important;}
+
+         [class^="fill"] { position: relative; }
+
+         [class^="fill"] .cont { position: relative; z-index: 10; -webkit-transition: color .3s; transition: color .3s; }
+
+         [class^="fill"] .icon:before, [class^="fill"] .icon:after { -webkit-transition: background .3s, border-color .3s; transition: background .3s, border-color .3s; }
+
+         [class^="fill"]:before { content: ""; position: absolute; top: 50%; left: 50%; width: 0; height: 0; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 1; -webkit-transition: width .3s, height .3s; transition: width .3s, height .3s; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
+
+         [class^="fill"]:hover:before, [class^="fill"]:focus:before { width: 100%; height: 100%; }
+
+         [class^="fill"]:hover .cont, [class^="fill"]:focus .cont { color: #fff; }
+
+         [class^="fill"]:hover .icon:before, [class^="fill"]:hover .icon:after, [class^="fill"]:focus .icon:before, [class^="fill"]:focus .icon:after { background: #fff !important; border-color: #fff !important; }
+
+         [class^="fill"].circle:before { border-radius: 100%; }
+
+         .fill--shadow:before { background: rgba(0, 0, 0, 0.1); }
+
+         .fill--brown:hover, .fill--brown:focus { background-color: #8d592e !important; -webkit-transition: background 0s .3s; transition: background 0s .3s; }
+
+         .fill--brown:before { background: #8d592e; }
+
+         #wrap { height: 100%; }
+
+         html.fixed { overflow-y: hidden; position: relative; }
+        html.fixed.poor_android .theframe_wrap {position:fixed;}
+
+         .fade { opacity: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; -ms-transition: all 0.3s; transition: all 0.3s; }
+
+
+        .tablet_img,
+        .mobile_img { display: none; }
+
+         .scroll-guide { -webkit-transition: opacity 0.3s; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -ms-transition: opacity 0.3s; transition: opacity 0.3s; position: absolute; right:95px; bottom:39px; padding: 4px 2em 0 0; line-height: 9px; font-family: "SamsungSharpSans", arial; font-weight: bold;  font-size: 0.75rem; letter-spacing: 0.1em; z-index: 50;  background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/scroll_down_icon.png?$ORIGIN_PNG$"); background-position: right bottom; }
+
+         .scroll-guide a { color: #fff; }
+
+         .scroll-guide span { opacity: 0.5; }
+
+         .enter { display: block; }
+
+         .pc_br { display: block; }
+
+         .clearfix { content: ""; display: block; clear: both; }
+
+         .m_content_highlight_kv { position: relative; overflow: hidden; height: calc(100vh-72); height: -webkit-calc(100vh-72); margin-bottom: 140px;}
+
+         .m_content_highlight_kv .tit_h1 { text-indent: -9999px; font-size: 0; width: 0; height: 0; }
+
+         .m_content_highlight_kv .f_container figure { position: absolute; width: 100%; height: 100%; }
+
+         .m_content_highlight_kv .f_container figure img { position: absolute; width: 100%; height: 100%;  -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 50%; top: 50%; }
+
+         .m_content_highlight_kv .bg { position: absolute; background: #fff; z-index: 3; }
+
+         .m_content_highlight_kv .bg.lft { left: 0; height: 100%; }
+
+         .m_content_highlight_kv .bg.rgh { right: 0; height: 100%; }
+
+         .m_content_highlight_kv .bg.btm { bottom: -10px; width: 100%; }
+
+         .m_content_highlight_kv .inner { position: absolute; z-index: 5; height: 100%; width: 100%; }
+
+         .m_content_highlight_kv .inner .text_box { position: absolute; bottom:88px; left:181px; color: #fff; }
+        .s3.mobile .m_content_highlight_kv .inner .text_box,
+        .s2 .m_content_highlight_kv .inner .text_box {left:50px;bottom:80px;}
+        .s1 .m_content_highlight_kv .inner .text_box {left:30px;bottom:30px;}
+
+         .m_content_highlight_kv .inner .text_box .stit { letter-spacing: 2.8px; font-size: 12px; line-height: 13px; }
+
+         .m_content_highlight_kv .inner .text_box .tit { font-size: 48px; line-height: 58px; margin-bottom: 20px; font-weight: bold; }
+         .m_content_highlight_kv .inner .text_box .tit span {font-family: "SamsungSharpSans", arial;}
+
+         .m_content_highlight_kv .inner .text_box .txt { font-size: 15px; line-height: 24px; padding-left: 120px; position: relative; }
+
+         .m_content_highlight_kv .inner .text_box .txt:before { content: ""; position: absolute; left: 0; top: 5px; background-color: #8d592e; width: 60px; height: 5px; }
+
+        .m_content_highlight_kv .f_container {position:absolute;width:100%;height:100%;}
+        .m_content_highlight_kv .f_container .kv_img {display:block;}
+        .m_content_highlight_kv .f_container .kv_img figure {position:absolute;}
+        .m_content_highlight_kv .f_container .kv_img .android_loop {display:block;}
+        .m_content_highlight_kv .f_container video {position: absolute;top: 50%;left: 50%;width: auto;height: auto;max-width: none;max-height: none;min-width: 100%;min-height: 100%;z-index: 2;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);}
+        .android .m_content_highlight_kv .f_container .kv_img,
+        .ios .m_content_highlight_kv .f_container .kv_img {position:absolute;width:100%;height:100%;display:block;z-index:2;}
+        .android .m_content_highlight_kv .f_container .kv_img figure,
+        .ios .m_content_highlight_kv .f_container .kv_img figure {opacity:0;}
+        .android .m_content_highlight_kv .f_container .kv_img figure:first-child,
+        .ios .m_content_highlight_kv .f_container .kv_img figure:first-child {opacity:1;}
+        .android .m_content_highlight_kv .f_container .kv_img .android_loop,
+        .ios .m_content_highlight_kv .f_container .kv_img .android_loop {display:block;}
+
+        .android .m_content_highlight_kv .f_container .kv_img img,
+        .ios .m_content_highlight_kv .f_container .kv_img img {position:absolute;top:50%;left:50%;width:100%;height:auto;max-width:none;max-height:none;}
+
+        .android .m_content_highlight_kv .f_container .kv_img img,
+        .ios .m_content_highlight_kv .f_container .kv_img img {transform:translate(-50%, -50%) scale(1.4);-webkit-transform:translate(-50%, -50%) scale(1.4);-ms-transform:translate(-50%, -50%) scale(1.4);transition:none;-webkit-transition:none;}
+        .load.android .m_content_highlight_kv .f_container .kv_img figure.on img,
+        .load.ios .m_content_highlight_kv .f_container .kv_img figure.on img {transform:translate(-50%, -50%) scale(1.3);-webkit-transform:translate(-50%, -50%) scale(1.3);-ms-transform:translate(-50%, -50%) scale(1.3);transition:transform 7s;-webkit-transition:transform 7s;}
+
+        @media all and (max-width:768px){
+            .android .m_content_highlight_kv .f_container .kv_img img,
+            .ios .m_content_highlight_kv .f_container .kv_img img {transform:translate(-50%, -50%) scale(1.2);-webkit-transform:translate(-50%, -50%) scale(1.2);-ms-transform:translate(-50%, -50%) scale(1.2);}
+            .load.android .m_content_highlight_kv .f_container .kv_img figure.on img,
+            .load.ios .m_content_highlight_kv .f_container .kv_img figure.on img {transform:translate(-50%, -50%) scale(1.1);-webkit-transform:translate(-50%, -50%) scale(1.1);-ms-transform:translate(-50%, -50%) scale(1.1);}
+        }
+
+        .android .m_content_highlight_kv .f_container video,
+        .ios .m_content_highlight_kv .f_container video {display:none;}
+
+        .android .m_content_highlight_kv .inner,
+        .ios .m_content_highlight_kv .inner {z-index:5;}
+        .android .m_content_highlight_kv .inner .text_box,
+        .ios .m_content_highlight_kv .inner .text_box {z-index:10;}
+        .android .m_content_highlight_kv .f_container,
+        .ios .m_content_highlight_kv .f_container {z-index:2;}
+        .android .m_content_highlight_kv.play .kv_img,
+        .ios .m_content_highlight_kv.play .kv_img {display: none;}
+        .android .m_content_highlight_kv.play .f_container video,
+        .ios .m_content_highlight_kv.play .f_container video {display:block;}
+        .android .m_content_highlight_kv .f_container,
+        .ios .m_content_highlight_kv .f_container {z-index:2;}
+
+        .m_content_highlight_kv .kv_video > figcaption {width:0;height:0;font-size:0;opacity:0;}
+
+         .art_mode_area { margin-bottom:140px; text-align: center;}
+
+         .art_mode_area .frame_box { margin-bottom: 70px; }
+
+         .art_mode_area .frame_box .para { position: static; text-align: center;max-width:720px;margin:0 auto; }
+        .s1 .art_mode_area .frame_box .para {padding:0 5%;}
+
+         .art_mode_area .frame_img img { max-width: 100%; }
+        .s1 .art_mode_area .frame_img img {width:100%;max-width:inherit;}
+
+         .collection_area {overflow:hidden; }
+
+         .collection_area .frame_box { margin-bottom: 40px; }
+
+         .collection_area .frame_box .para { position: relative; text-align: center; padding: 0 5%; }
+
+         .collection_area .filter_btn { max-width: 860px; margin: 0 auto 0px auto; }
+
+         .collection_area .filter_btn ul { display: block; text-align: center; width:93%;margin:0 auto;}
+
+         .collection_area .filter_btn ul:after { display: block; clear: both; content: ""; }
+
+         .collection_area .filter_btn ul li { display: inline-block; margin: 0 8px 20px 8px; position: relative; background: #f0f0f0; }
+
+         .collection_area .filter_btn ul li a:before { width: 0; height: 0; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); position: absolute; content: ""; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 1; -webkit-transition: width .3s, height .3s; transition: width .3s, height .3s; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
+
+         .collection_area .filter_btn ul li:hover{ background: #8d592e; -webkit-transition-delay: 0.3s; -moz-transition-delay: 0.3s; -ms-transition-delay: 0.3s; -o-transition-delay: 0.3s; transition-delay: 0.3s; }
+
+         .collection_area .filter_btn ul li:hover a:before, .collection_area .filter_btn ul li.on a:before, .collection_area .filter_btn ul li a:focus:before { background: #8d592e; width: 101%; height: 101%; }
+
+         .collection_area .filter_btn ul li:hover a, .collection_area .filter_btn ul li.on a,.collection_area .filter_btn ul li a:focus {  color: #fff; -webkit-box-shadow:0px 8px 25px rgba(0, 0, 0, 0.35); -moz-box-shadow:0px 8px 25px rgba(0, 0, 0, 0.35); -ms-box-shadow:0px 8px 25px rgba(0, 0, 0, 0.35); box-shadow:0px 8px 25px rgba(0, 0, 0, 0.35); -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -ms-transition: all 0.5s; transition: all 0.5s; }
+
+         .collection_area .filter_btn ul li a { color: #212121; position: relative; position: relative; z-index: 10; display: block; padding: 13px 20px 12px; font-size: 12px; white-space: nowrap; letter-spacing: 1.1px; text-transform: uppercase; }
+        .firefox .collection_area .filter_btn ul li a {min-height:16px;}
+
+         .collection_area .filter_btn ul li a span.img { display: none; }
+
+         .collection_area .filter_btn ul li a span.img:before { content: ""; opacity: 0; }
+        .collection_area .filter_btn ul li a .tit  {position: relative; font-weight:bold; z-index:1;}
+        .collection_area .filter_btn ul li a .tit em {font-style:normal;}
+        .collection_area .filter_btn ul li a .tit i {display:none;}
+
+        .ios .collection_area .filter_btn ul li a:before {display:none !important;}
+        .ios .collection_area .filter_btn ul li.on a:before {display:block !important;}
+
+        @media (max-width: 768px) {
+        .ios .collection_area .filter_btn ul li.on a:before {display:none !important;}
+        }
+
+         .Mask_Motion { position: relative; }
+
+         .Mask_Motion .mask { position: absolute; background: #fff; top: 0; -webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); -moz-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); -o-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); -ms-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+         .Mask_Motion .mask.top { width: 100%; height: 90px; }
+
+         .Mask_Motion .mask.lft { height: 100%; width: 90px; left: 0; }
+
+         .Mask_Motion .mask.rgh { height: 100%; width: 90px; right: 0; }
+
+         .Mask_Motion.on .mask.top { height: 0; }
+
+         .Mask_Motion.on .mask.lft { width: 0; }
+
+         .Mask_Motion.on .mask.rgh { width: 0; }
+
+         .frame_box { position: relative; max-width: 1440px; margin: 0 auto; }
+
+         .frame_box .para { position: absolute; color: #212121; }
+
+         .frame_box .para .stit { font-size: 11px; letter-spacing: 1.2px; margin-bottom: 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: "SamsungSharpSans", arial;}
+
+         .frame_box .para .tit { font-size: 36px; font-weight: bold; margin-bottom: 20px; line-height: 46px; font-family: "SamsungSharpSans", arial;}
+
+         .frame_box .para .txt { font-size: 15px; line-height: 24px; font-family: SamsungOne; }
+
+         .frame_box .para .txt + p { margin-top: 10px; font-size: 13px; line-height: 20px; }
+
+         .frame_bd { position: relative; }
+
+         .frame_bd > * { position: relative; }
+
+         .frame_bd .square { position: absolute; z-index: 0;  }
+
+         .frame_bd .square:before { position: absolute; display: block; content: ""; background-color: #8c5932; width: 10px; height: 0%; }
+
+         .frame_bd .square:after { position: absolute; display: block; content: ""; background-color: #8c5932; width: 0%; height: 10px; }
+
+         .frame_bd .square.on:before { height: 100%; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; -ms-transition: all 1s; transition: all 1s; }
+
+         .frame_bd .square.on:after { width: 100%; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; -ms-transition: all 1s; transition: all 1s; }
+
+         .frame_bd .square.rgh { right: -10px; }
+
+         .frame_bd .square.rgh:before { right: 0; }
+
+         .frame_bd .square.btm { bottom: -10px; }
+
+         .frame_bd .square.btm:before { bottom: 0; }
+
+         .frame_bd .square.btm:after { bottom: 0; }
+
+         .frame_bd .square.top { top: -10px; }
+
+         .frame_bd .square.top:before { top: 0; }
+
+         .frame_bd .square.top:after { top: 0; }
+
+         .frame_bd .square.lft { left: -10px; }
+
+         .frame_bd .square.lft:before { left: 0; }
+
+         .product_area { background: #fff; position: relative; }
+
+         .product_area .inner { max-width: 1440px; margin: 0 auto; }
+
+         .spec_desc { max-width: 1200px; padding: 0 3%; margin: 0 auto; }
+
+         .spec_desc .frame_cont { position: relative; }
+
+         .spec_desc .frame_box { position: absolute; width: 45%; text-align: center; height: 100%; right: 0; }
+
+         .spec_desc .frame_box .para { width: calc(100% - 8.22%); top: calc(100% - 97.52%); left: 50%; -ms-transform: translate(-50%, 0%); -webkit-transform: translate(-50%, 0%); transform: translate(-50%, 0%); }
+
+         .spec_desc .video_area { position: absolute; opacity: 0; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; -ms-transition: all 1s; transition: all 1s; -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -ms-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; }
+
+         .spec_desc .video_area figure { margin-bottom: 16px; max-width: 420px; }
+
+         .spec_desc .video_area figure * { max-width: 100%; }
+
+         .spec_desc .video_area .txt { line-height: 1.54; font-size: 13px; color: #212121; }
+
+         .spec_desc.active .video_area { opacity: 1; }
+
+         .spec_desc.imgRgh .frame_box { left: 0; right: inherit; }
+
+         .spec_desc.imgRgh .frame_img { margin-left: 45%; }
+
+         .spec_desc .frame_img { width: 55%; }
+
+         .spec_desc .frame_img img { max-width: 100%; }
+
+         .product_area .spec_desc { margin-bottom: 13.88889%; }
+
+         .product_area .spec_desc.s1 { max-width: 1440px; padding: 0; margin-bottom:140px;}
+
+         .product_area .spec_desc.s1:after { display: block; clear: both; content: ""; }
+
+         .product_area .spec_desc.s1 .frame_box .para .txt {max-width:410px;}
+
+         .product_area .spec_desc.s1 .frame_cont { float: right; }
+
+         .product_area .spec_desc.s1 .frame_box { z-index: 1; text-align: left; }
+
+         .product_area .spec_desc.s1 .frame_box .para { color: #fff; top: 50%; left: 45%; -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+         .product_area .spec_desc.s1 .frame_img { width: 100%; }
+
+         .product_area .spec_desc.s2 { height:800px;margin-bottom: 140px; }
+
+         .product_area .spec_desc.s2 .frame_img .frameSlide { overflow: hidden; }
+
+         .product_area .spec_desc.s2 .pagenation {position:relative; text-align: center; margin-top: 20px; vertical-align: middle; }
+
+         .product_area .spec_desc.s2 .pagenation > button.pause {position:relative; top:-2px;  text-indent: -9999px; display: inline-block; width: 12px; height: 21px; background: url(//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/btn_pause.jpg) center center no-repeat; margin-right: 10px; }
+
+         .product_area .spec_desc.s2 .pagenation > button.pause.on { background: url(//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/btn_play.gif) center center no-repeat; }
+
+         .product_area .spec_desc.s2 .pagenation .inner { display: inline-block; height: 21px; }
+
+         .product_area .spec_desc.s2 .pagenation .inner button { display: inline-block; position:relative; background: #a4a4a4; margin: 0 10px; width: 8px; height: 8px; border-radius: 50%; cursor: pointer;text-indent:-99999px; vertical-align:middle;}
+
+         .product_area .spec_desc.s2 .pagenation .inner button.swiper-active-switch { background: #8c5932; }
+
+         .product_area .spec_desc.s2 .pagenation .inner button.swiper-active-switch:before { content: ""; position: absolute; top: -3px; left: -3px; width: 12px; height: 12px; border: 1px solid #8d592e; border-radius: 50%; }
+
+         .product_area .spec_desc.s2 .spec_img { margin-top: 50px; }
+
+         .product_area .spec_desc.s2 .spec_img_m { display: none; }
+        .product_area .spec_desc.s2 .refer_text {font-size:13px;color:#212121;font-family:'SamsungOne';}
+        .product_area .spec_desc.s3 {margin-bottom:140px;}
+        .product_area .spec_desc.s4 {margin-bottom:140px;}
+
+         .viewSlider { position: relative; max-width: 1080px; margin: 0 auto 140px auto; padding-top: 30px; }
+
+         .viewSlider_close { display: none; }
+
+         .viewSlider button.btn { position: absolute; top: 50%; z-index: 10; text-indent: -9999px; border-radius: 50%; width: 48px; height: 48px; background: #fff; -ms-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -ms-transition: all 0.5s; transition: all 0.5s; -webkit-box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.3); -moz-box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.3); -ms-box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.3); box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.3); }
+
+         .viewSlider button.btn.lock { background: #ebecec !important; cursor: default; outline: none; }
+
+         .viewSlider button.btn.lock:before { background: #ebecec !important; }
+
+         .viewSlider button.btn.lock span.icon:before { border-color: #fff !important; }
+
+         .viewSlider button.btn.lock span.icon:after { background: #fff !important; }
+
+         .viewSlider button.btn.next { right: -100px; }
+
+         .viewSlider button.btn.next span.icon:before { top: 20px; right: 17px; -webkit-transform: rotate(135deg); -moz-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg); border-width: 2px 0px 0px 2px; }
+
+         .viewSlider button.btn.next span.icon:after { top: 24px; right: 18px; }
+
+         .viewSlider button.btn.prev { left: -100px; }
+
+         .viewSlider button.btn.prev span.icon:before { top: 20px; left: 17px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); border-width: 0px 0px 2px 2px; }
+
+         .viewSlider button.btn.prev span.icon:after { top: 24px; left: 18px; }
+
+         .viewSlider button.btn:before { content: ""; border-radius: 50%; position: absolute; top: 50%; left: 50%; width: 0; height: 0; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 1; -webkit-transition: width .3s, height .3s; transition: width .3s, height .3s; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
+
+         .viewSlider button.btn span.icon { display: block; width: 100%; height: 100%; position: relative; z-index: 10; }
+
+         .viewSlider button.btn span.icon:before { content: ""; position: absolute; border-width: 0 0 2px 2px; border-style: solid; border-color: #1c1c1c; width: 8px; height: 8px; -webkit-transition: all 0s; -moz-transition: all 0s; -o-transition: all 0s; -ms-transition: all 0s; transition: all 0s; }
+
+         .viewSlider button.btn span.icon:after { content: ""; position: absolute; height: 2px; width: 14px; background: #1c1c1c; -webkit-transition: all 0s; -moz-transition: all 0s; -o-transition: all 0s; -ms-transition: all 0s; transition: all 0s; }
+
+         .viewSlider button.btn:hover span.icon:before,.viewSlider button.btn:focus span.icon:before { border-color: #fff; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; -ms-transition: all 0.3s; transition: all 0.3s; }
+
+         .viewSlider button.btn:hover span.icon:after,.viewSlider button.btn:focus span.icon:after { background: #fff; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; -ms-transition: all 0.3s; transition: all 0.3s; }
+
+         .viewSlider button.btn:hover:before,.viewSlider button.btn:focus:before  { background: #80512a; width: 100%; height: 100%; }
+
+         .viewSlider .collection { position: relative; z-index: 1; margin-left: 30px; line-height: 35px; }
+
+        .viewSlider .collection a {color: #fff;}
+        .ios .viewSlider button.btn:before {display:none !important;}
+
+         .viewSlider .collection .collection_tit { width:0;height:0;opacity:0;font-size:0; font-family: "SamsungSharpSans", arial;}
+
+         .viewSlider .collection:after { display: block; clear: both; content: ""; }
+
+         .viewSlider .collection > ul { position: relative; float: left; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; -ms-transition: opacity 0.5s; transition: opacity 0.5s; box-sizing: border-box; opacity: 0.3; }
+
+         .viewSlider .collection > ul .img { position: relative; z-index: 1; }
+
+         .viewSlider .collection > ul .img:first-child { margin-bottom: 50px; }
+
+         .viewSlider .collection > ul .img .inner { position: relative; margin-bottom: 14px; }
+
+         .viewSlider .collection > ul .img .inner img { width: 100%; position: relative; z-index: 999; -webkit-transition: transform 0.2s; -moz-transition: transform 0.2s; -o-transition: transform 0.2s; -ms-transition: transform 0.2s; transition: transform 0.2s; }
+
+
+         .viewSlider .collection > ul .img div > strong { display:block; font-size: 13px; color: #212121; margin-bottom: 3px; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; overflow: hidden;font-family: "SamsungSharpSans", arial; }
+
+         .viewSlider .collection > ul .img div p { color: #757575; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; overflow: hidden;}
+
+         .viewSlider .collection > ul .img span { position: absolute; width: 135.1%; height: 148%; z-index: 99; top: -24%; left: -17.3%; \/ background-size: 100% 100%; opacity: 0; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; -ms-transition: all 0.1s; transition: all 0.1s; }
+
+
+
+         .viewSlider .collection > ul.on { opacity: 1; }
+
+         .viewSlider .collection > ul.on .img.on { z-index: 99; }
+
+         .viewSlider .collection > ul.on .img.on .inner img { -webkit-transform: scale(1.202); -moz-transform: scale(1.202); -ms-transform: scale(1.202); transform: scale(1.202); }
+
+         .viewSlider .collection > ul.on .img.on span { opacity: 1; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -ms-transition: all 0.5s; transition: all 0.5s; }
+        .firefox .viewSlider .collection > ul .img .inner img {-webkit-transition: transform 0.15s; -moz-transition: transform 0.15s; -o-transition: transform 0.15s; -ms-transition: transform 0.15s; transition: transform 0.15s;}
+        .firefox .viewSlider .collection > ul.on .img.on span {-webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; -ms-transition: all 0.3s; transition: all 0.3s;}
+
+         .frameSlide .swiper-slide { float: left; }
+
+        @media all and (max-width: 1400px) { .pc_br { display: inline; }
+         .m_content_highlight_kv figure img { min-height: inherit; min-width: inherit; }
+         .viewSlider button.prev { left: -50px; }
+         .viewSlider button.next { right: -50px; } }
+
+        @media all and (max-width: 1290px) {
+            .viewSlider button.btn.next {right:-50px;}
+            .viewSlider button.btn.prev {left:-50px;}
+        }
+        @media all and (max-width: 1200px) {
+            .viewSlider button.btn.next {right:30px;}
+            .viewSlider button.btn.prev {left:30px;}    
+        }
+
+        @media all and (max-width: 1080px) { .viewSlider .collection > * { padding-left: 0; } }
+
+        @media all and (max-width: 1024px) { 
+          .frame_box .para { text-align: center; }
+         }
+
+        @media all and (max-width: 900px) { 
+         .pc_img { display: none; }
+         .product_area .spec_desc.s1 .frame_cont { float: none; }
+         .frame_box .para p.txt { max-width: 70%; margin: 0 auto 20px; }
+         .spec_desc .frame_box { position: relative; width: 100%; margin-bottom: 30px; }
+         .spec_desc .frame_box .para { position: relative; width: 100%; }
+         .spec_desc .frame_img { width: 100%; text-align: center; }
+         .spec_desc .frame_img img { max-width: inherit; width: 100%; }
+         .spec_desc.imgRgh .frame_img { margin-left: 0; }
+         .spec_desc .frame_box .para .enter { display: block; }
+         .spec_desc.s4:after { display: block; clear: both; content: ""; }
+         .spec_desc.s4 .video_area, .spec_desc.s4.on .video_area { position: static; width: 420px; }
+         .spec_desc.s4 .video_area.s1, .spec_desc.s4.on .video_area.s1 { float: none; margin-top: 6.94444%; }
+         .spec_desc.s4 .video_area.s2, .spec_desc.s4.on .video_area.s2 { float: right; margin-top: 2.77778%; }
+          .spec_desc.s4 .frame_box { margin-bottom:33px; }
+         .spec_desc.s4 .frame_box .para { width: auto; text-align: center; }
+         .spec_desc.s4 .frame_img .wall { width: 100%; }
+         .spec_desc.s5 .frame_box { background: #fff; padding-top: 40px; }
+         .spec_desc.s4 .frame_img .wall img { right: -34%; height: auto; width: 140%; -ms-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); top: 50%; }
+         .spec_desc.s4 .frame_img .mask > figure img { width: 100%; max-width: inherit; }
+         .spec_desc.s4.on .frame_img .wall img { right: -14%; }
+         .product_area .spec_desc.s1 .frame_box .para { top: 14px; -ms-transform: translate(-50%, 0%); -webkit-transform: translate(-50%, 0%); transform: translate(-50%, 0%); left: 50%; }
+         .spec_desc.s1 .frame_box { position: absolute; top: 10%; width: 80%; left: 50%; text-align: center; -ms-transform: translate(-50%, 0%); -webkit-transform: translate(-50%, 0%); transform: translate(-50%, 0%); }
+         .product_area .spec_desc.s2 .spec_img { display: none; }
+         .product_area .spec_desc.s2 .spec_img_m { display: block; text-align: center; margin-top: 33px; }
+          .product_area .spec_desc.s2 .spec_img_m > img {display:block;width:259px;margin:0 auto;}
+         .spec_desc.s2 .frame_cont { padding-top: 47px; } 
+          .s2 .spec_desc.s2 .frame_cont {padding-top: 67px;}
+          .product_area .spec_desc.s2 {height:auto;}
+          .tablet_img {display:block;}
+        }
+
+        @media all and (max-width: 768px) { 
+            .viewSlider .collection > ul .img .inner img {transition:none;}
+            .viewSlider .collection > ul .img div > strong {margin-bottom:6px;white-space:normal;font-size:18px;}
+            .viewSlider_close {position:fixed; top:125px; right:30px; width: 48px; height: 48px; text-indent: -9999px; border-radius: 100%; background-color:#212121; overflow: hidden; z-index: 100; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); display: block; }
+            .ios .viewSlider_close {position: -webkit-sticky;position: sticky; top:61px; float:right; right:0;}
+            .viewSlider_close:before, .viewSlider_close:after { content: ""; position: absolute; top: 23px; left: 17px; width: 14px; height: 2px; background: #fff; }
+            .viewSlider_close:after { top: 17px; left: 23px; width: 2px; height: 14px; }
+
+            .s2 .viewSlider {top:64px;}
+            .collection_area .filter_btn ul li:hover a:before, .collection_area .filter_btn ul li.on a:before, .collection_area .filter_btn ul li a:focus:before {display: none;}
+         .collection_area .filter_btn ul li { background: none; }
+         .collection_area .filter_btn ul li:hover:before, .collection_area .filter_btn ul li.on:before { display: none; }
+         .collection_area .filter_btn { padding-left: 10px; overflow: hidden; padding-bottom: 20px; }
+         .collection_area .filter_btn ul { text-align: left; }
+         .collection_area .filter_btn ul li a { padding: 0; background: none;}
+         .collection_area .filter_btn ul li:hover a, .collection_area .filter_btn ul li.on a,.collection_area .filter_btn ul li a:focus  { background: none; color: #212121; -webkit-box-shadow:  0px 0px 0px transparent; -moz-box-shadow:  0px 0px 0px transparent; -ms-box-shadow:  0px 0px 0px transparent; box-shadow:  0px 0px 0px transparent; }
+         .collection_area .filter_btn ul li a span.tit { color: #212121; display: block; margin-bottom: 25px; font-weight: bold; text-align: center; font-family: "SamsungSharpSans", arial;}
+         .collection_area .filter_btn ul li a span.img { display: block; max-width: 100%; }
+         .collection_area .filter_btn ul li a span.img img { width: 100%; }
+          .collection_area .filter_btn ul li a span.img img.line {box-sizing:border-box;border:1px solid #ccc;}
+         .collection_area .filter_btn ul li { margin: 0 0 0 -0.25em; padding: 0 10px; }
+         .collection_area .filter_btn ul li:hover { background: none; }
+         .collection_area .filter_btn ul li.swiper-slide-active span.img { position: relative; }
+         .collection_area .filter_btn ul li.swiper-slide-active span.img:before { opacity: 1; position: absolute; background: url(//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/beige_polar-white.png); background-size: 100% 100%; width: 95.3%; height: 106%; top: -2.8%; left: 2.3%; content: ""; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; -ms-transition: opacity 0.5s; transition: opacity 0.5s; }
+         .collection_area .filter_btn ul li.swiper-slide-active span.img img { -webkit-transform: scale(0.85); -moz-transform: scale(0.85); -ms-transform: scale(0.85); transform: scale(0.85); -webkit-transition: transform 0.5s; -moz-transition: transform 0.5s; -o-transition: transform 0.5s; -ms-transition: transform 0.5s; transition: transform 0.5s; }
+         .collection_area .filter_btn ul li.swiper-slide-active.ran1 span.img:before { background-image: url(//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/beige_polar-white.png); }
+         .collection_area .filter_btn ul li.swiper-slide-active.ran2 span.img:before { background-image: url(//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/walnut_polar-white.png); }
+         .collection_area .filter_btn ul li.swiper-slide-active.ran3 span.img:before { background-image: url(//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/white_polar-white.png); }
+         .gallery_page { text-align: center; margin-top: 12px; }
+         .gallery_page button { display: inline-block; background: #a4a4a4; margin: 0 8px; width: 8px; height: 8px; border-radius: 50%;vertical-align:middle; text-indent:-9999px;}
+         .ie .gallery_page button {overflow:visible;}
+         .gallery_page button.swiper-active-switch { background: #8c5932; position: relative; }
+         .gallery_page button.swiper-active-switch:before { content: ""; position: absolute; top: -3px; left: -3px; width: 12px; height: 12px; border: 1px solid #8d592e; border-radius: 50%; }
+         .viewSlider { background: #f0f0f0; padding: 0% 5% 100px 5%; position: fixed; top: 78px; height: 100%; overflow: scroll; width: 100%; box-sizing: border-box; z-index: 100; display: none; -webkit-overflow-scrolling: touch; }
+         .viewSlider .collection { width: auto !important; height:auto !important; margin-left: 0; }
+         .viewSlider .collection .collection_tit { display: block; width:auto;height:auto; text-align: center; margin-bottom: 25px; padding-top: 17%; font-size:24px; text-transform: uppercase;opacity:1; }
+         .viewSlider .collection ul.group { width: auto !important; padding-left: 0 !important; float: none; opacity: 1; }
+         .viewSlider .collection ul.group .img { margin-bottom: 38px; text-align: center; }
+         .viewSlider .collection ul.group .img:first-child { margin-bottom: 38px; }
+         .viewSlider .collection ul.group .img .inner span { display: none; }
+         .viewSlider .collection ul.group .img.on .inner img { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+         .viewSlider .collection ul.group .img figcaption h3 { font-size: 18px; }
+         .viewSlider .collection ul.group .img figcaption p { color: #212121; } 
+          .collection_area .filter_btn ul li {opacity:0.3;}
+          .collection_area .filter_btn ul li.swiper-slide-active {opacity:1;}
+          .collection_area .filter_btn ul li a .tit i {position:relative;top:-1px;display:inline;font-style:normal;}
+
+          .viewSlider button.btn {display:none;}
+          .s2 .collection_area {margin-bottom:130px;}
+        }
+          .poor_android .viewSlider .collection:after {height:100px;}
+
+
+        @media all and (max-width: 720px) {  .scroll-guide span { display: none; }
+           .frame_bd .square { width: 120px; height: 58px; }
+           .frame_bd .square.top { top: -6px; }
+           .frame_bd .square.btm { bottom: -6px; }
+           .frame_bd .square.lft { left: -6px; }
+           .frame_bd .square.rgh { right: -6px; }
+           .frame_bd .square:before { width: 6px; }
+           .frame_bd .square:after { height: 6px; }
+           .frame_box .para .stit { margin-bottom: 1px; }
+           .frame_box .para .tit { margin-bottom: 10px; font-size: 22px; line-height: 30px; letter-spacing: 1px; }
+           .frame_box .para .txt { max-width: none; } }
+
+        @media all and (max-width: 640px) { 
+         .m_content_highlight_kv .inner .text_box .tit { font-size: 30px; line-height: 38px; margin-bottom: 0; }
+         .spec_desc, .parallax_area > .inner, .frame_box.solo { padding-right: 5%; padding-left: 5%; }
+         .parallax_area > .inner .parallax_obj.fixed .inner { width: 90%; }
+         .frame_box .para p.txt { max-width: inherit; }
+         .frame_box .para p.txt span.enter { display: inline; }
+         .frame_box.solo { margin-bottom: 0px; }
+         .spec_desc.s1 .video_area { width: 240px; }
+         .spec_desc.s1 .frame_img .img { width: 100%; }
+         .spec_desc.s1 .frame_img .img img { width: 100%; }
+         .spec_desc.s1 .frame_img .img .zoom { width: 100%; }
+         .spec_desc .video_area { width: 240px; }
+         .frame_box .para .tit { font-size: 22px; line-height: 1.36; letter-spacing: 1px; }
+         .spec_desc.s5:after { display: block; clear: both; content: ""; }
+         .spec_desc.s5 .frame_img { overflow: hidden; }
+         .spec_desc.s5 .frame_img img { width: 900px; -webkit-transform: scale(1.3); -moz-transform: scale(1.3); -ms-transform: scale(1.3); transform: scale(1.3); -ms-transform-origin: 25% 25%; -webkit-transform-origin: 25% 25%; -moz-transform-origin: 25% 25%; -o-transform-origin: 25% 25%; transform-origin: 25% 25%; -webkit-transition: all 1.5s; -moz-transition: all 1.5s; -o-transition: all 1.5s; -ms-transition: all 1.5s; transition: all 1.5s; }
+         .spec_desc.s5.on .frame_img img { -webkit-transform: scale(1.3); -moz-transform: scale(1.3); -ms-transform: scale(1.3); transform: scale(1.3); -ms-transform-origin: 220% 100%; -webkit-transform-origin: 220% 100%; -moz-transform-origin: 220% 100%; -o-transform-origin: 220% 100%; transform-origin: 220% 100%; }
+         .spec_desc.s5 .video_area { width: 240px; left: 0; margin-top: 20px; float: right; }
+         .spec_desc.s4 .video_area, .spec_desc.s4.on .video_area { width: 240px; }
+         .spec_desc.s4 .video_area.s1, .spec_desc.s4.on .video_area.s1 { float: none; text-align: left; }
+         .spec_desc.s4 .video_area.s2, .spec_desc.s4.on .video_area.s2 { float: right; }
+         .spec_desc .video_area .txt { letter-spacing: -1px; }
+         .spec_desc.s5:after { display: block; clear: both; content: ""; }
+         .spec_desc.s5 .video_area { float: right; position: static; margin-top: 30px; }
+         .product_area .spec_desc.s2 .spec_img_m { text-align: left; }
+         .spec_desc.s1 .frame_box { width: 90%; }
+         .collection_area .frame_box .para { max-width: 90%; margin: 0 auto; }
+         .collection_area .frame_box .para { max-width: 100%; }
+         .product_area .spec_desc.s2 .pagenation .inner button { margin: 0 5px; } }
+         .ie .product_area .spec_desc.s2 .pagenation .inner button {overflow:visible;}
+          .product_area .spec_desc.s2 {padding:0 30px;}
+        @media all and (max-width: 500px) { 
+            .tablet_img {display:none;}
+            .mobile_img {display:block;}
+        }
+        @media all and (max-width: 400px) { 
+         .spec_desc.s1 .spec_bezel li:first-child { text-align: left; }
+         .spec_desc.s1 .spec_bezel li:last-child { text-align: right; }
+         .spec_desc .video_area { width: 240px; }
+         .spec_desc.s5.on .frame_img img { -ms-transform-origin: 250% 100%; -webkit-transform-origin: 250% 100%; -moz-transform-origin: 250% 100%; -o-transform-origin: 250% 100%; transform-origin: 250% 100%; } }
+
+         .sticky { position: -webkit-sticky; position: sticky; top: 0; display: block; width: 100%; padding: 11px 4%; padding: 11px 0; margin-bottom: -1px; font-size: 0; text-align: center; box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12); box-sizing: border-box; background: #fff; z-index: 100; }
+
+         .sticky:before, .sticky:after { content: ''; display: table; }
+
+        @media (max-width: 782px) {  .sticky { padding: 12px 3.125%; padding: 12px 0; } }
+
+        @media (max-width: 720px) { .sticky { padding: 6px 3.333% 0; padding: 6px 0 0; } }
+
+         .sticky nav { display: inline-block; width: 100%; max-width: 1440px; margin: 0 auto; }
+
+         .sticky a { display: block; color: #757575; }
+
+         .sticky .is-active a { color: #8d592e; }
+
+         .sticky .lnb-logo { float: left; margin-left: 4%; }
+
+        @media (max-width: 782px) {  .sticky .lnb-logo { margin-left: 3.125%; } }
+
+        @media (max-width: 720px) {  .sticky .lnb-logo { margin: 0 0 6px 3.333%; } }
+
+        .sticky .lnb-logo img { max-width: 88px; }
+
+        @media (max-width: 782px) {  .sticky .lnb-logo img { max-width: 69px; } }
+
+        @media (max-width: 720px) {  .sticky .lnb-logo img { max-width: 64px; } }
+
+        .sticky .lnb-item-wrap { float: right; height: 2.25rem; padding: 7px 4% 7px 0; line-height: 2.25rem; font-family: "SamsungSharpSans", arial; font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+        @media (max-width: 782px) { .sticky .lnb-item-wrap { padding: 2px 3.125% 2px 0; } }
+
+        @media (max-width: 720px) { .sticky .lnb-item-wrap { width: 100%; height: 36px; padding: 0; line-height: 2.25rem; overflow-x: scroll; } }
+
+        .sticky .lnb-item-wrap .buynow { float: left; padding: 0; margin-left: 20px; background: #8d592e; box-shadow: 0px 4px 9px 0px rgba(141, 89, 46, 0.54); }
+
+        @media (max-width: 720px) { .sticky .lnb-item-wrap .buynow { position: absolute; top: 9px; right: 3.3333%; height: 30px; margin: 0 3px 0 0; line-height: 1.875rem; box-shadow: 0px 2px 5px 0px rgba(141, 89, 46, 0.54); } }
+
+         .sticky .lnb-item-wrap .buynow a { padding: 0 20px; color: #fff; }
+
+         .sticky .lnb-item-wrap .lnb-item-group { float: left; }
+
+        @media (max-width: 720px) {  .sticky .lnb-item-wrap .lnb-item-group { width: 100%; padding: 0 12px; box-sizing: border-box; } }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item { position: relative; display: inline-block; padding: 2px; height: 2rem; line-height: 2rem; margin-right: -2px; }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a { padding: 0 21px; background-color: #fff; }
+
+        @media (max-width: 1279px) { .sticky .lnb-item-wrap .lnb-item-group .lnb-item a { padding: 0 17px; } }
+
+        @media (max-width: 1024px) { .sticky .lnb-item-wrap .lnb-item-group .lnb-item a { padding: 0 12px; } }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-top { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+
+        @media (max-width: 782px) {  .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-top { display: none !important; } }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-top:before { top: -100%; left: 0; width: 2px; height: 100%;  }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-top:after { top: 0; left: -100%; width: 100%; height: 2px; \ }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-bottom { position: absolute; bottom: 0; right: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+
+        @media (max-width: 782px) { .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-bottom { display: none !important; } }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-bottom:before { top: -100%; right: 0; width: 2px; height: 100%;  -webkit-animation-delay: .2s; animation-delay: .2s; }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-bottom:after { bottom: 0; left: -100%; width: 100%; height: 2px;  -webkit-animation-delay: .2s; animation-delay: .2s; }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item a:hover, .sticky .lnb-item-wrap .lnb-item-group .lnb-item a:focus { color: #8d592e; -webkit-transition: color .6s; transition: color .6s; }
+
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item [class^="frame"]:before, .sticky .lnb-item-wrap .lnb-item-group .lnb-item [class^="frame"]:after { content: ""; position: absolute; -webkit-animation-duration: .2s; animation-duration: .2s; background-color: #8d592e; }
+
+
+        @media (max-width: 720px) { .sticky .lnb-item-wrap .lnb-item-group { position: relative; display: table; white-space: nowrap; }
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item { display: none; }
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item.mob-col-3 { display: table-cell; padding: 0; text-align: center; }
+         .sticky .lnb-item-wrap .lnb-item-group .lnb-item.mob-col-3 a { display: inline-block; } }
+
+        @media (max-width: 480px) { .sticky .lnb-item-wrap .lnb-item-group .lnb-item.mob-col-3:nth-of-type(2) a, .sticky .lnb-item-wrap .lnb-item-group .lnb-item.mob-col-3:nth-of-type(4) a { padding: 0; } }
+
+        .sticky .bar { position: absolute; top: auto !important; bottom: 0; height: 4px; margin-left: -0.05em; z-index: 100; background-color: #8d592e; display: none; }
+
+        @media (max-width: 782px) { .sticky .bar { display: block; } }
+
+        @media (max-width: 720px) { .sticky .bar { bottom: 0; height: 3px; } }
+
+        @media (max-width: 720px) { 
+            .sticky nav {height:78px;overflow:hidden;}
+            .sticky .lnb-item-wrap { width: 100%; height: 56px; padding: 0; line-height: 2.25rem; overflow-x: scroll; overflow-y:hidden; } 
+        }
+        @media (max-width: 320px) {
+            .m_content_highlight_kv .inner .text_box .tit {font-size:25px;line-height:33px;}
+        }
+
+        .slide_info {max-width:350px;margin:-9px auto 0;text-align:left;}
+        .slide_info > strong {display:block;margin-bottom:10px;font-size:12px;color:#000;font-family: "SamsungSharpSans", arial;font-weight:bold;}
+        .slide_info > ul {margin-bottom:27px;font-size:0;}
+        .slide_info > ul li {display:inline-block;width:50%;margin-bottom:8px;font-size:13px;color:#767676;font-family: "SamsungOne", sans-serif;}
+        .slide_info > ul li > i {font-style:normal;}
+        .slide_info > ul li.on {font-weight:bold;color:#000;}
+        .slide_info > ul li.on > i {text-decoration:underline;}
+        .slide_info > ul.list_layout li .icon {display:inline-block;width:34px;margin-right:10px;border:1px solid transparent;vertical-align:middle;transition:all .5s;-webkit-transition:all .5s;}
+        .slide_info > ul.list_layout li .icon.bw {display:none;}
+        .slide_info > ul.list_layout li img {display:block;width:100%;box-sizing:border-box;border:1px solid #9e9e9e;transition:all .5s;-webkit-transition:all .5s;}
+        .slide_info > ul.list_layout li img.active {display:none;}
+        .slide_info > ul.list_layout li.on .icon {box-shadow:2px 3px 15px -5px #282727; border-color:#676767;}
+        .slide_info > ul.list_layout li.on img {display:none;border-color:#676767;}
+        .slide_info > ul.list_layout li.on img.active {display:block;}
+        .ie .slide_info > ul.list_layout li .icon {margin-left:3px;}
+
+        .color_bw .slide_info > ul.list_layout li .icon {display:none;}
+        .color_bw .slide_info > ul.list_layout li .icon.bw {display:inline-block;}
+
+        .slide_info > ul.list_color li .icon {display:inline-block;margin-right:10px;border:1px solid transparent;border-radius:100%;vertical-align:middle;transition:all .5s;-webkit-transition:all .5s;}
+        .slide_info > ul.list_color li .icon i {display:block;width:24px;height:24px;border-radius:100%;box-sizing:border-box;transition:all .5s;-webkit-transition:all .5s;}
+        .slide_info > ul.list_color li .icon.white i {border:1px solid #e8e6e7;background-color:#e8e6e7;}
+        .slide_info > ul.list_color li .icon.warm i {border:1px solid #e7e7df;background-color:#e7e7df;}
+        .slide_info > ul.list_color li .icon.antique i {border:1px solid #e0dbd2;background-color:#e0dbd2;}
+        .slide_info > ul.list_color li .icon.neutral i {border:1px solid #898886;background-color:#898886;}
+        .slide_info > ul.list_color li .icon.black i {border:1px solid #222221;background-color:#222221;}
+        .slide_info > ul.list_color li .icon.sand i {border:1px solid #a5916f;background-color:#a5916f;}
+        .slide_info > ul.list_color li .icon.seafoam i {border:1px solid #5a6865;background-color:#5a6865;}
+        .slide_info > ul.list_color li .icon.sage i {border:1px solid #aab18b;background-color:#aab18b;}
+        .slide_info > ul.list_color li .icon.brugandy i {border:1px solid #63262d;background-color:#63262d;}
+        .slide_info > ul.list_color li .icon.navy i {border:1px solid #26354b;background-color:#26354b;}
+
+        .slide_info > ul.list_color li.on .icon {border-color:#404040;box-shadow:2px 3px 15px -5px #282727;}
+        .slide_info > ul.list_color li.on .icon i {border-color:#404040;}
+
+        html.s12 .spec_img_m .slide_info {position:relative;left:50%;}
+        html.s12 .slide_info > strong {margin-bottom:17px;}
+        html.s12 .slide_info > ul {margin-bottom:40px;}
+        html.s2 .spec_img_m .slide_info {max-width:450px;margin:0 0 0 -200px;}
+        html.s2 .spec_img_m .slide_info > ul li {width:33.333%;}
+        html.s1 .spec_img_m .slide_info {margin:0 0 0 -130px;}
+
+
+        .spec_desc.s2 .frameSlide .swiper-slide {position:relative;}
+        .s34 .spec_desc.s2 .frameSlide .swiper-slide > figcaption {display:none;}
+        .spec_desc.s2 .frameSlide .swiper-slide > figcaption {position:absolute;bottom:0;right:0;padding:10px 0;min-width:147px;background-color:#fff;font-size:0;text-align:center;}
+        .spec_desc.s2 .frameSlide .swiper-slide > figcaption img {display:inline-block;width:39px;margin-right:9px;box-sizing:border-box;border:1px solid #404040;vertical-align:middle;} 
+        .spec_desc.s2 .frameSlide .swiper-slide > figcaption span {display:inline-block;font-size:13px;vertical-align:middle;font-family: "SamsungOne", sans-serif;}
+
+
+        .s1 .m_content_highlight_kv {margin-bottom:80px;}
+        .s1 .art_mode_area {margin-bottom:80px;}
+        .s1 .collection_area {margin-bottom:75px;}
+        .s1 .product_area .spec_desc.s1 {margin-bottom:90px;}
+        .s1 .product_area .spec_desc.s2 {margin-bottom:70px;}
+        .s1 .product_area .spec_desc.s3 {margin-bottom:80px;}
+        .s1 .product_area .spec_desc.s4 {margin-bottom:80px;}
+
+
+
+
+
+        body.zoom {
+          overflow: hidden;
+        }
+        [data-section-name="spec"], .zoom-wrapper {
+          position: relative;
+          background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/highlight_bg.jpg?$ORIGIN_JPG$");
+          background-size: cover;
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+
+        @media (max-width: 782px) {
+          [data-section-name="spec"], .zoom-wrapper {
+            background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/pattern_bg_768.jpg?$ORIGIN_JPG$");
+            background-size: initial;
+          }
+        }
+
+        @media (max-width: 720px) {
+          [data-section-name="spec"], .zoom-wrapper {
+            background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/pattern_bg.jpg?$ORIGIN_JPG$");
+            background-size: initial;
+          }
+        }
+
+        [data-section-name="spec"] h2 {
+          position: relative;
+          padding-top: 60px;
+          font-family: "SamsungSharpSans", arial;
+          font-weight: bold;
+          font-size: 22px;
+          letter-spacing: 0.1em;
+          text-align: center;
+          color: #fff;
+          z-index: 80;
+        }
+
+        [data-section-name="spec"] article {
+          display: table;
+          width: 100%;
+          max-width: 1440px;
+          margin: 0 auto;
+        }
+
+        [data-section-name="spec"] article > h3 {
+          display: none;
+        }
+
+        [data-section-name="spec"] article .image-group {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin-bottom: -30px;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
+        [data-section-name="spec"] article .image-group button {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          text-indent: -9999px;
+          overflow: hidden;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/vertical_arrow_btn.png?$ORIGIN_PNG$") !important;
+          background-color: transparent !important;
+          box-shadow: none;
+        }
+
+        [data-section-name="spec"] article .image-group a {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 48px;
+          height: 48px;
+          text-indent: -9999px;
+          border-radius: 100%;
+          background: #fff;
+          box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.35);
+          overflow: hidden;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          z-index: 80;
+        }
+
+        [data-section-name="spec"] article .image-group a .icon {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-indent: -9999px;
+          overflow: hidden;
+          z-index: 10;
+        }
+
+        [data-section-name="spec"] article .image-group a .icon:before, [data-section-name="spec"] article .image-group a .icon:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-color: transparent !important;
+          -webkit-transition: opacity .4s;
+          transition: opacity .4s;
+          z-index: 1;
+        }
+
+        [data-section-name="spec"] article .image-group a .icon:before {
+          background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/zoom_icon.png?$ORIGIN_PNG$");
+        }
+
+        [data-section-name="spec"] article .image-group a .icon:after {
+          background-size: contain !important;
+          background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/zoom_icon_on.png?$ORIGIN_PNG$") !important;
+          opacity: 0;
+        }
+
+        [data-section-name="spec"] article .image-group a:hover .icon:before, [data-section-name="spec"] article .image-group a:focus .icon:before {
+          opacity: 0;
+        }
+
+        [data-section-name="spec"] article .image-group a:hover .icon:after, [data-section-name="spec"] article .image-group a:focus .icon:after {
+          opacity: 1;
+        }
+
+        [data-section-name="spec"] article .image-group.active a {
+          display: block;
+        }
+
+        [data-section-name="spec"] article .image-group ul {
+          position: relative;
+        }
+
+        [data-section-name="spec"] article .image-group li {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+        }
+
+        [data-section-name="spec"] article .image-group img {
+          max-width: 100%;
+          margin-top: 6%;
+        }
+
+        [data-section-name="spec"] article .info {
+          display: table-cell;
+          width: 50%;
+          padding: 50px 100px 50px 0;
+          box-sizing: border-box;
+          vertical-align: middle;
+        }
+
+        [data-section-name="spec"] article .info table {
+          position: relative;
+          float: left;
+          width: 100%;
+          font-family: 'SamsungOne', arial;
+          font-size: 13px;
+          line-height: 24px;
+          text-align: left;
+          color: #fff;
+        }
+
+        [data-section-name="spec"] article .info table caption {
+          width: 0;
+          height: 0;
+          text-indent: -9999px;
+          overflow: hidden;
+        }
+
+        [data-section-name="spec"] article .info table th {
+          width: 16em;
+          padding-right: 10px;
+          font-family: "SamsungSharpSans", arial;
+          font-weight: bold;
+          font-size: 13px;
+          letter-spacing: 0.23em;
+          vertical-align: text-top;
+          text-align: left;
+        }
+
+        [data-section-name="spec"] article .info table tr.separated th:before, [data-section-name="spec"] article .info table tr.separated td:before {
+          content: "";
+          float: left;
+          width: 100%;
+          height: 2em;
+        }
+
+        [data-section-name="spec"] article .info table tr.inch th {
+          line-height: 32px;
+        }
+
+        [data-section-name="spec"] article .info table tr.inch td {
+          font-family: "SamsungSharpSans", arial;
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 58px;
+          letter-spacing: 0.04em;
+        }
+
+        [data-section-name="spec"] article .info table tr.inch td:nth-of-type(1) {
+          width: 2.3em;
+        }
+
+        [data-section-name="spec"] article .info table a.catalogue {
+          display: inline-block;
+          padding: 0 16px;
+          margin-top: 8px;
+          line-height: 32px;
+          font-family: "SamsungSharpSans", arial;
+          color: #fff;
+          text-transform: uppercase;
+          border: 2px solid rgba(255, 255, 255, 0.54);
+          white-space: nowrap;
+        }
+
+        [data-section-name="spec"] article .info table a.catalogue:after {
+          content: "";
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/download_icon.png?$ORIGIN_PNG$");
+          background-position: right bottom;
+          vertical-align: text-top;
+        }
+
+        @media (max-width: 782px) {
+          [data-section-name="spec"] article .info table a.catalogue {
+            border-width: 1px;
+          }
+        }
+
+        [data-section-name="spec"] article .info li {
+          position: relative;
+          float: left;
+          width: 100%;
+          padding-left: 0.7em;
+        }
+
+        [data-section-name="spec"] article .info li:before {
+          content: "";
+          position: absolute;
+          width: 0.1em;
+          height: 0.1em;
+          background: #fff;
+          top: 0.25em;
+          left: 0;
+          line-height: 1em;
+          font-size: 3em;
+          border-radius: 3em;
+        }
+
+        [data-section-name="spec"] article .dot-wrap {
+          display: none;
+        }
+
+        [data-section-name="spec"].static .info table {
+          margin-top: 4em;
+          -webkit-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          transform: translateY(0%);
+        }
+
+        [data-section-name="spec"] button {
+          display: block;
+          padding: 0 33px;
+          margin: 0 auto 100px;
+          line-height: 44px;
+          font-family: "SamsungSharpSans", arial;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 0.23em;
+          color: #8d592e;
+          background: #fff;
+          box-shadow: 0px 24px 32px 0px rgba(0, 0, 0, 0.2);
+          z-index: 88;
+        }
+
+        [data-section-name="spec"] .count {
+          position: absolute;
+          left: 4.1667%;
+          bottom: 12.43961%;
+          line-height: 1;
+          font-family: "SamsungSharpSans", arial;
+          font-size: 13px;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+          color: #fff;
+          z-index: 200;
+        }
+
+        [data-section-name="spec"] .bottom-fixed {
+          position: absolute;
+          bottom: 4.58%;
+          left: 4.1667%;
+          width: 91.6666%;
+          line-height: 13px;
+          padding-top: 25px;
+          border-top: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        [data-section-name="spec"] .bottom-fixed h3, [data-section-name="spec"] .bottom-fixed p {
+          float: left;
+        }
+
+        [data-section-name="spec"] .bottom-fixed p {
+          margin-left: 50px;
+          font-family: "SamsungSharpSans", arial;
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          color: #fff;
+        }
+
+        [data-section-name="spec"] .bottom-fixed .scroll-guide {
+          position: static;
+          float: right;
+        }
+
+        .zoom-wrapper {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 9999;
+          opacity: 0;
+        }
+
+        @media (max-width: 782px) {
+          [data-section-name="spec"] {
+            height: auto !important;
+          }
+          [data-section-name="spec"] h2 {
+            top: 0;
+            margin-top: 55px;
+            margin-bottom: 25px;
+            font-size: 15px;
+          }
+          [data-section-name="spec"] .count {
+            display: none;
+          }
+          [data-section-name="spec"] button {
+            display: block;
+            margin: 0 auto 4em;
+            bottom: 0;
+          }
+          [data-section-name="spec"] .bottom-fixed {
+            position: relative;
+            bottom: auto;
+          }
+          [data-section-name="spec"] .bottom-fixed p {
+            clear: both;
+            width: 100%;
+            margin-left: 0;
+            line-height: 30px;
+            letter-spacing: 0;
+          }
+          [data-section-name="spec"] .bottom-fixed p span {
+            display: none;
+          }
+          [data-section-name="spec"] .bottom-fixed .scroll-guide {
+            margin: 2em 0;
+          }
+          [data-section-name="spec"] article {
+            position: relative;
+            height: auto;
+          }
+          [data-section-name="spec"] article .image-group {
+            position: relative;
+            top: 0 !important;
+            width: 100%;
+            padding: 0;
+            margin-bottom: -12%;
+            white-space: nowrap;
+            font-size: 0;
+          }
+          [data-section-name="spec"] article .image-group li {
+            width: 100%;
+            height: auto !important;
+            box-sizing: border-box;
+          }
+          [data-section-name="spec"] article .image-group img {
+            position: static;
+            max-width: 108%;
+            margin-top: -10%;
+            margin-left: -4%;
+            -webkit-transform: none !important;
+            -ms-transform: none !important;
+            transform: none !important;
+          }
+          [data-section-name="spec"] article .image-group button {
+            display: none !important;
+          }
+          [data-section-name="spec"] article .dot-wrap {
+            position: relative;
+            top: -4em;
+            display: inline-block;
+            margin-bottom: 1em;
+          }
+          [data-section-name="spec"] article .info {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            padding: 0 10% 2em;
+          }
+          [data-section-name="spec"] article .info table {
+            position: static;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+          }
+          [data-section-name="spec"] article .info table th {
+            display: block;
+            width: 100%;
+            margin-top: 2em;
+          }
+          [data-section-name="spec"] article .info table td {
+            display: inline-block;
+          }
+          [data-section-name="spec"] article .info table td:before, [data-section-name="spec"] article .info table td:after {
+            content: '';
+            display: table;
+          }
+          [data-section-name="spec"] article .info table tr.inch td {
+            line-height: 1;
+            font-size: 30px;
+          }
+          [data-section-name="spec"] article .info table .inch td, [data-section-name="spec"] article .info table .inch + tr td {
+            float: left;
+            width: 50% !important;
+          }
+          [data-section-name="spec"] article .info table .inch th, [data-section-name="spec"] article .info table .inch + tr th {
+            display: none;
+          }
+          [data-section-name="spec"] article .info table tr.separated th:before, [data-section-name="spec"] article .info table tr.separated td:before {
+            content: none;
+          }
+
+          .zoom-box {
+            overflow: scroll;
+            background: none !important;
+            -webkit-overflow-scrolling: touch;
+          }
+          .zoom-box + a {
+            position: fixed !important;
+          }
+          .zoom-box + a:before, .zoom-box + a:after {
+            content: "";
+            position: absolute;
+            top: 23px;
+            left: 15px;
+            width: 18px;
+            height: 2px;
+            background: #000;
+          }
+          .zoom-box + a:after {
+            top: 15px;
+            left: 23px;
+            width: 2px;
+            height: 18px;
+          }
+          .zoom-box img {
+            position: absolute;
+            display: block !important;
+            padding: 50px;
+          }
+        }
+
+        @media (max-width: 782px) and (max-width: 480px) {
+          .zoom-box img, img.dimd {
+            max-width: 600px;
+          }
+        }
+
+        .zoom-box {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          z-index: 9999;
+        }
+
+        .zoom-box img {
+          display: none;
+        }
+
+        .zoom-box a, .zoom-box + a {
+          position: absolute;
+          top: 4.1667%;
+          right: 4.1667%;
+          width: 48px;
+          height: 48px;
+          text-indent: -9999px;
+          border-radius: 100%;
+          background: #fff;
+          overflow: hidden;
+          z-index: 10000;
+          cursor: pointer;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+
+        .zoom-box a:before, .zoom-box a:after, .zoom-box + a:before, .zoom-box + a:after {
+          content: "";
+          position: absolute;
+          top: 23px;
+          left: 15px;
+          width: 18px;
+          height: 2px;
+          background: #000;
+        }
+
+        .zoom-box a:after, .zoom-box + a:after {
+          top: 15px;
+          left: 23px;
+          width: 2px;
+          height: 18px;
+        }
+
+        .zoom-box a:hover, .zoom-box a:focus, .zoom-box + a:hover, .zoom-box + a:focus {
+          background: #000;
+        }
+
+        .zoom-box a:hover:before, .zoom-box a:hover:after, .zoom-box a:focus:before, .zoom-box a:focus:after, .zoom-box + a:hover:before, .zoom-box + a:hover:after, .zoom-box + a:focus:before, .zoom-box + a:focus:after {
+          background: #fff;
+        }
+
+        img.dimd {
+          display: none;
+        }
+
+        .page-navigation {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+          border-width: 1px 1px 0 1px;
+          font-size: 0.7em;
+          background: #fbfbfb;
+          border-top: 1px solid #e9e9e9;
+        }
+
+        @media (max-width: 782px) {
+          .page-navigation {
+            position: relative;
+          }
+        }
+
+        .page-navigation nav {
+          max-width: 1440px;
+          margin: 0 auto;
+        }
+
+        .page-navigation a.next {
+          float: right;
+          background: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/bg_page_navi_next.jpg?$ORIGIN_JPG$") 100% 50% no-repeat;
+          text-align: right;
+          padding: 23px 55px 23px 0;
+          margin-right: 30px;
+        }
+
+        @media (max-width: 782px) {
+          .page-navigation a.next {
+            background: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/mob_page_navi_next.jpg?$ORIGIN_JPG$") 100% 50% no-repeat;
+            padding: 15px 22px 15px 0;
+            background-size: 20px;
+            margin-right: 10px;
+          }
+        }
+
+        .page-navigation a.prev {
+          float: left;
+          background: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/bg_page_navi_prev.jpg?$ORIGIN_JPG$") 0 50% no-repeat;
+          padding: 23px 0 23px 55px;
+          margin-left: 30px;
+        }
+
+        @media (max-width: 782px) {
+          .page-navigation a.prev {
+            background: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/mob_page_navi_prev.jpg?$ORIGIN_JPG$") 0 50% no-repeat;
+            background-size: 20px;
+            padding: 15px 0 15px 22px;
+            margin-left: 10px;
+          }
+        }
+
+        .page-navigation a strong {
+          font-size: 24px;
+          color: #000;
+          text-transform: uppercase;
+          font-family: "samsungOne", arial;
+        }
+
+        @media (max-width: 782px) {
+          .page-navigation a strong {
+            font-size: 16px;
+          }
+        }
+
+        .page-navigation a span {
+          display: block;
+          font-size: 16px;
+          color: #5a5956;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-family: "SamsungSharpSans", arial;
+        }
+
+        @media (max-width: 782px) {
+          .page-navigation a span {
+            font-size: 10px;
+          }
+        }
+
+        .page-navigation a {
+          display: inline-block;
+        }
+
+        .color_bw button.fill--brown {
+          background: #000 !important;
+          border: 5px solid #000;
+          box-sizing: content-box;
+          color: #fff;
+        }
+
+        .color_bw .zoom.fill--brown.circle {
+          background: #000 !important;
+          border: 5px solid #000;
+          box-sizing: content-box;
+        }
+
+        .color_bw .zoom.fill--brown.circle .icon:before {
+          border-color: #fff !important;
+        }
+
+        .color_bw .zoom.fill--brown.circle .icon:after {
+          opacity: 1;
+        }
+
+        .color_bw section h2 {
+          display: table;
+          padding: 5px 20px;
+          margin: 0 auto;
+          background: #000;
+        }
+
+        .color_bw .info table {
+          padding: 15px;
+          background: #000;
+        }
+
+        .color_bw [data-section-name="spec"] article .image-group button {
+          background-color: #000 !important;
+        }
+
+        [class^="fill"] {
+          position: relative;
+        }
+
+        [class^="fill"] .cont {
+          position: relative;
+          z-index: 10;
+          -webkit-transition: color .3s;
+          transition: color .3s;
+        }
+
+        [class^="fill"] .icon:before, [class^="fill"] .icon:after {
+          -webkit-transition: background .3s, border-color .3s;
+          transition: background .3s, border-color .3s;
+        }
+
+        [class^="fill"]:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          -webkit-transition: width .3s, height .3s;
+          transition: width .3s, height .3s;
+          -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+        }
+
+        [class^="fill"]:hover:before, [class^="fill"]:focus:before {
+          width: 100%;
+          height: 100%;
+        }
+
+        [class^="fill"]:hover .cont, [class^="fill"]:focus .cont {
+          color: #fff;
+        }
+
+        [class^="fill"]:hover .icon:before, [class^="fill"]:hover .icon:after, [class^="fill"]:focus .icon:before, [class^="fill"]:focus .icon:after {
+          background: #fff !important;
+          border-color: #fff !important;
+        }
+
+        [class^="fill"].circle:before {
+          border-radius: 100%;
+        }
+
+        .fill--shadow:before {
+          background: rgba(0, 0, 0, 0.1);
+        }
+
+        .fill--brown:hover, .fill--brown:focus {
+          background-color: #8d592e !important;
+          -webkit-transition: background 0s .3s;
+          transition: background 0s .3s;
+        }
+
+        .fill--brown:before {
+          background: #8d592e;
+        }
+
+        .ie8 [data-section-name="spec"] {float:none;height:1000px;background-attachment:inherit;background-position: center 0;}
+        .ie8 [data-section-name="spec"]:after {clear:both;content:'';}
+        .ie8 [data-section-name="spec"] article {overflow:hidden;}
+        .ie8 [data-section-name="spec"] article .image-group {width:50%;margin-top:-100px;float:left;}
+        .ie8 [data-section-name="spec"] article .image-group img {margin-top:130px;}
+        .ie8 [data-section-name="spec"] article .image-group a {top:auto;bottom:150px;margin:0 0 0 -24px !important;}
+        .ie8 [data-section-name="spec"] article .image-group a:before {display:none;}
+        .ie8 [data-section-name="spec"] article .info {position:relative;top:100px;width:50%;display:block;float:left;}
+        .ie8 [data-section-name="spec"] article .info table a.catalogue {border: 2px solid #fff;}
+        .ie8 [data-section-name="spec"] article .info table a.catalogue:after {background-image:url('//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/download_icon_ie8.png');}
+        .ie8 [data-section-name="spec"] button {position:absolute;bottom:200px;left:50%;margin:0 0 0 -90px;}
+        .ie8 .page-navigation {position:absolute;bottom:0;}
+
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a { text-indent: 0 !important; font-size: 0; background-color:#fff !important;}
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a .icon { text-indent: 0 !important; }
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a .icon:before { content: "+"; font-size: 40px; font-weight: bold; text-align: center; color: #000; background: none !important; opacity: 1; }
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a .icon:after { content: none; }
+
+        [data-section-name="spec"] article .image-group a {display:none !important;}
+        .zoom-box {display:none !important;}
+        .zoom-box + a {display:none !important;}
+
+
+
+
+        .m_content_highlight_kv .play-ctrl {display:none;}
+        .android .m_content_highlight_kv .play-ctrl { position: relative; display:block; width: 72px; height: 72px; margin-top: 38px; font-size: 0; font-family: "SamsungSharpSans", arial; font-weight: bold; text-transform: uppercase; text-align: left; opacity:0; 
+        transition:opacity .7s;-webkit-transition:opacity .7s;transition-delay:.5s;-webkit-transition-delay:.5s;}
+        .android .m_content_highlight_kv.load .play-ctrl {opacity:1;}
+        .android .m_content_highlight_kv .play-ctrl .play-btn { width: 100%; height: 100%; background: #fff; border-radius: 100%; overflow: hidden; }
+        .android .m_content_highlight_kv .play-ctrl .play-btn .triangle { display: block; width: 100%; height: 100%; text-indent: -9999px; overflow: hidden; z-index: 10; }
+        .android .m_content_highlight_kv .play-ctrl .play-btn .triangle:before, 
+        .android .m_content_highlight_kv .play-ctrl .play-btn .triangle:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: contain; background-position: center center; background-repeat: no-repeat; z-index: 1; -webkit-transition: opacity .4s; transition: opacity .4s; }
+        .android .m_content_highlight_kv .play-ctrl .play-btn .triangle:before { background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/kv_play_btn.png?$ORIGIN_PNG$"); }
+        .android .m_content_highlight_kv .play-ctrl .play-btn .triangle:after { background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/kv_play_btn_on.png?$ORIGIN_PNG$"); opacity: 0; }
+        .android .m_content_highlight_kv .play-ctrl .play-btn:hover .triangle:before, 
+        .android .m_content_highlight_kv .play-ctrl .play-btn:focus .triangle:before { opacity: 0; }
+        .android .m_content_highlight_kv .play-ctrl .play-btn:hover .triangle:after, 
+        .android .m_content_highlight_kv .play-ctrl .play-btn:focus .triangle:after { opacity: 1; }
+        .android .m_content_highlight_kv .play-ctrl .cont { position: absolute; top: 50%; left: 0; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); z-index: -1; }
+        .android .m_content_highlight_kv .play-ctrl .cont:before { content: "Watch"; }
+        .android .m_content_highlight_kv .play-ctrl .cont:after { content: "Video"; }
+        .android .m_content_highlight_kv .play-ctrl .cont:before, 
+        .android .m_content_highlight_kv .play-ctrl .cont:after { display: inline-block; line-height: 21px; font-size: 12px; text-align: left; text-indent: 88px; letter-spacing: 0.1em; color: #fff; white-space: nowrap; }
+        .android .m_content_highlight_kv .play-ctrl:focus .cont:before, 
+        .android .m_content_highlight_kv .play-ctrl:focus .cont:after { outline: none; }
+
+        .s1.android .m_content_highlight_kv .play-ctrl { width:60px;height:60px; margin-top: 18px; }
+        .s1.android .m_content_highlight_kv .play-ctrl .cont {left:-14px;}
+
+        .ios .m_content_highlight_kv .play-ctrl { position: relative; display:block; width: 72px; height: 72px; margin-top: 38px; font-size: 0; font-family: "SamsungSharpSans", arial; font-weight: bold; text-transform: uppercase; text-align: left; opacity:0; 
+        transition:opacity .7s;-webkit-transition:opacity .7s;transition-delay:.5s;-webkit-transition-delay:.5s;}
+        .ios .m_content_highlight_kv.load .play-ctrl {opacity:1;}
+        .ios .m_content_highlight_kv .play-ctrl .play-btn { width: 100%; height: 100%; background: #fff; border-radius: 100%; overflow: hidden; background-color:#fff !important; }
+        .ios .m_content_highlight_kv .play-ctrl .play-btn:before {display:none !important;}
+        .ios .m_content_highlight_kv .play-ctrl .play-btn .triangle { display: block; width: 100%; height: 100%; text-indent: -9999px; overflow: hidden; z-index: 10; }
+        .ios .m_content_highlight_kv .play-ctrl .play-btn .triangle:before, 
+        .ios .m_content_highlight_kv .play-ctrl .play-btn .triangle:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;  background-size: contain; background-position: center center; background-repeat: no-repeat; z-index: 1; -webkit-transition: opacity .4s; transition: opacity .4s; }
+        .ios .m_content_highlight_kv .play-ctrl .play-btn .triangle:before { background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/kv_play_btn.png?$ORIGIN_PNG$"); }
+        .ios .m_content_highlight_kv .play-ctrl .play-btn .triangle:after { background-image: url("//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/kv_play_btn_on.png?$ORIGIN_PNG$"); opacity: 0; }
+        .ios .m_content_highlight_kv .play-ctrl .cont { position: absolute; top: 50%; left: 0; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); z-index: -1; }
+        .ios .m_content_highlight_kv .play-ctrl .cont:before { content: "Watch"; }
+        .ios .m_content_highlight_kv .play-ctrl .cont:after { content: "Video"; }
+        .ios .m_content_highlight_kv .play-ctrl .cont:before, 
+        .ios .m_content_highlight_kv .play-ctrl .cont:after { display: inline-block; line-height: 21px; font-size: 12px; text-align: left; text-indent: 88px; letter-spacing: 0.1em; color: #fff; white-space: nowrap; }
+        .ios .m_content_highlight_kv .play-ctrl:focus .cont:before, 
+        .ios .m_content_highlight_kv .play-ctrl:focus .cont:after { outline: none; }
+
+        .s1.ios .m_content_highlight_kv .play-ctrl { width:60px;height:60px; margin-top: 18px; }
+        .s1.ios .m_content_highlight_kv .play-ctrl .cont {left:-14px;}
+
+        .content_video_layer {display:none;}
+        .android .content_video_layer {position:fixed;top:0;left:0;display:none;width:100%;height:100%;background-color:#000;z-index:10000;}
+        .android .content_video_layer .content {position:relative;width:100%;height:100%;}
+        .android .content_video_layer .content video {position: absolute;top: 50%;left: 50%;width: 100%;height: 100%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
+        .android .content_video_layer .content figure figcaption {width:0;height:0;font-size:0;opacity:0;}
+        .android .content_video_layer .content .close {position: absolute;top: 4.1667%;right: 4.1667%;width: 48px;height: 48px;text-indent: -9999px;border-radius: 100%;box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);overflow: hidden;z-index: 100;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
+        .android .content_video_layer .content .close:before,
+        .android .content_video_layer .content .close:after {content: "";position: absolute;top: 23px;left: 17px;width: 14px;height: 2px;background: #fff;}
+        .android .content_video_layer .content .close:after {top: 17px;left: 23px;width: 2px;height: 14px;}
+
+        .ios .content_video_layer {position:fixed;top:0;left:0;display:none;width:100%;height:100%;background-color:#000;z-index:10000;}
+        .ios .content_video_layer .content {position:relative;width:100%;height:100%;}
+        .ios .content_video_layer .content video {position: absolute;top: 50%;left: 50%;width: 100%;height: 100%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
+        .ios .content_video_layer .content figure figcaption {width:0;height:0;font-size:0;opacity:0;}
+        .ios .content_video_layer .content .close {position: absolute;top: 4.1667%;right: 4.1667%;width: 48px;height: 48px;text-indent: -9999px;border-radius: 100%;box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);overflow: hidden;z-index: 100;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
+        .ios .content_video_layer .content .close:before,
+        .ios .content_video_layer .content .close:after {content: "";position: absolute;top: 23px;left: 17px;width: 14px;height: 2px;background: #fff;}
+        .ios .content_video_layer .content .close:after {top: 17px;left: 23px;width: 2px;height: 14px;}
+
+        #accessibility {position: fixed;right: 60px;bottom: 34px;z-index: 50000;display:block;width: 21px;height: 21px;border:1px solid #fff;background-color:#000; vertical-align: middle; 
+        transition: opacity 0.2s linear;-webkit-transition: opacity 0.2s linear;
+        }
+        .desktop #accessibility:hover {opacity:0.3;}
+        .desktop #accessibility:focus,
+        .desktop #accessibility:active {opacity:1;}
+        #accessibility.active {background-color:#fff;}
+        #accessibility span {display: block;width: 100%;text-align: center;font-family: "SamsungOne", sans-serif;color:#fff;line-height:19px;}
+        #accessibility.active span {color:#000;}
+
+        .s1 #accessibility {right:20px;bottom:20px;}
+        .s1 .scroll-guide {right:57px;bottom:25px;}
+
+        .color_bw .m_content_highlight_kv .inner .text_box {background-color:#000 !important;}
+        .color_bw .scroll-guide {background-color:#000 !important;}
+        .color_bw .scroll-guide span {opacity:1 !important;}
+
+        .color_bw .collection_area .filter_btn ul li a {box-sizing:border-box !important;border:1px solid #000 !important;background-color:#fff !important;color:#000 !important;}
+        .color_bw .collection_area .filter_btn ul li.on a {background-color:#000 !important;color:#fff !important;}
+        .color_bw .collection_area .filter_btn ul li.on a:before {display:none !important;}
+        .color_bw .collection_area .filter_btn ul li.on a .tit em {text-decoration:underline !important;}
+        .color_bw .collection_area .filter_btn ul li a:before {display:none !important;}
+        .color_bw .viewSlider .collection > ul .img div p {color:#000 !important;}
+        .color_bw .product_area .spec_desc.s1 .frame_box .para {background-color:#000 !important;}
+        .color_bw .slide_info > ul li {color:#000 !important;}
+
+        .color_bw .viewSlider button.btn {background-color:#000 !important;border-radius:0 !important;}
+        .color_bw .viewSlider button.btn:before {display:none !important;}
+        .color_bw .viewSlider button.btn span.icon {background-color:#fff !important;border-radius:100% !important;}
+        .color_bw .viewSlider button.btn.lock span.icon {background-color:#ebecec !important;}
+        .color_bw .viewSlider button.btn:hover span.icon:before, 
+        .color_bw .viewSlider button.btn:focus span.icon:before,
+        .color_bw .viewSlider button.btn.lock span.icon:before {border-color:#000 !important;}
+        .color_bw .viewSlider button.btn:hover span.icon:after, 
+        .color_bw .viewSlider button.btn:focus span.icon:after,
+        .color_bw .viewSlider button.btn.lock span.icon:after {background-color:#000 !important;}
+
+        .color_bw .product_area .spec_desc.s2 .pagenation {background-color:#000 !important;}
+        .color_bw .product_area .spec_desc.s2 .pagenation > button.pause {background: url('//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/btn_pause_bw.jpg') center center no-repeat;}
+        .color_bw .product_area .spec_desc.s2 .pagenation > button.pause.on {background: url('//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/btn_play_bw.gif') center center no-repeat;}
+        .color_bw .product_area .spec_desc.s2 .pagenation .inner button {background-color:#fff !important;}
+        .color_bw .product_area .spec_desc.s2 .pagenation .inner button.swiper-active-switch {background-color:#fff !important;}
+        .color_bw .product_area .spec_desc.s2 .pagenation .inner button.swiper-active-switch:before {border-color:#fff !important;}
+
+        .color_bw .sticky a {color:#000 !important;}
+        .color_bw .sticky .is-active a {background-color:#000 !important;color:#fff !important;text-decoration:underline !important;}
+        .color_bw .sticky .lnb-item-wrap .lnb-item-group .lnb-item a ~ .frame-top {display:none !important;}
+        .color_bw .sticky .lnb-item-wrap .buynow {box-shadow:none !important;}
+        .color_bw .sticky .lnb-item-wrap .buynow a {background-color:#000 !important;color:#fff !important;}
+        .color_bw .sticky .bar {display:none !important;}
+
+        .color_bw .content_video_layer .content .close {background-color: #000 !important;border: 1px solid #fff !important;box-shadow: none !important;}
+        .color_bw .spec_desc.s2 .frameSlide .swiper-slide > figcaption span {color:#000 !important;}
+
+        .color_bw .slide_info > ul.list_color li .icon {border-color:#000 !important;}
+        .color_bw.ios .m_content_highlight_kv .play-ctrl .play-btn {border:0 !important;}
+
+        @media (max-width: 768px) {
+        .color_bw .collection_area .filter_btn ul li a {border:0 !important;}
+        .color_bw .collection_area .filter_btn ul li.on a {background-color:#fff !important;}
+        .color_bw .collection_area .filter_btn ul li.on a .tit em {text-decoration:none !important;}
+        .color_bw .gallery_page {background-color:#000 !important;}
+        .color_bw .gallery_page button {background-color:#fff !important;}
+        .color_bw .gallery_page button.swiper-active-switch:before {border-color:#fff !important;}
+        }
+
+        .ie8 .sticky .lnb-item-wrap .buynow {height:36px;line-height:36px;}
+        .ie8 .sticky .lnb-item-wrap .buynow a {font-size:12px;}
+        .ie8 .sticky .lnb-item-wrap .lnb-item-group .lnb-item {height:36px;line-height:36px;}
+        .ie8 .sticky .lnb-item-wrap .lnb-item-group .lnb-item a {font-size:12px;}
+
+        .ie8 .m_content_highlight_kv .f_container video {display:none;}
+        .ie8 .m_content_highlight_kv .f_container .kv_img {display:block;}
+        .ie8 .m_content_highlight_kv .f_container .kv_img img {position:absolute;top:0;left:0;width:auto;height:auto;max-width:none;max-height:none;min-width:110%;min-height:100%;}
+
+        .ie8 .Mask_Motion .mask {display:none !important;}
+        .ie8 .collection_area .filter_btn ul {width:800px;}
+        .ie8 .collection_area .filter_btn ul li {width:auto !important;}
+        .ie8 .collection_area .filter_btn ul li.on a {background-color:#8d592e;}
+        .ie8 .collection_area .filter_btn ul li a:before {display:none !important;}
+        .ie8 .viewSlider .collection > ul .img span {display:none;}
+
+        .ie8 .product_area .spec_desc.s1 .frame_box .para {margin:-131px 0 0 -250px;}
+        .ie8 .product_area .spec_desc.s2 .frame_box .para {top:50px;left:50px;}
+        .ie8 .product_area .spec_desc.s3 .frame_box .para {top:50px;left:auto;right:50px;}
+        .ie8 .product_area .spec_desc.s4 .frame_box .para {top:50px;left:50px;}
+
+        .ie8 .viewSlider button.btn {text-indent:0;font-size: 0;border:1px solid #000;}
+        .ie8 .viewSlider button.btn span.icon {width: inherit; height:inherit;display: inherit; position: static; }
+        .ie8 .viewSlider button.btn:after,.ie8 .viewSlider button.btn:before {display: none;}
+        .ie8 .viewSlider button.btn span.icon:before,.ie8 .viewSlider button.btn span.icon:after {border: 0;font-size: 20px; font-weight: bold;}
+        .ie8 .viewSlider button.btn span.icon:after  {display: none;}
+        .ie8 .viewSlider button.btn.next span.icon:before {content:">"; left:0;width:inherit;  height:inherit; position: absolute; top:50%; width:100%; text-align: center; margin-top: -13px;}
+        .ie8 .viewSlider button.btn.prev span.icon:before {
+            content:"<"; left:0;width:inherit;  height:inherit; position: absolute; top:50%; width:100%; text-align: center; margin-top: -13px;
+        }
+
+        html.ie8 {min-width:1440px;}
+        .ie8 [data-section-name="spec"] {float:none;height:1000px;background-attachment:inherit;background-position: center 0;}
+        .ie8 [data-section-name="spec"]:after {clear:both;content:'';}
+        .ie8 [data-section-name="spec"] article {overflow:hidden;}
+        .ie8 [data-section-name="spec"] article .image-group {width:50%;margin-top:-100px;}
+        .ie8 [data-section-name="spec"] article .image-group img {margin-top:130px;}
+        .ie8 [data-section-name="spec"] article .image-group a {top:auto;bottom:150px;margin:0 0 0 -24px !important;}
+        .ie8 [data-section-name="spec"] article .image-group a:before {display:none;}
+        .ie8 [data-section-name="spec"] article .info {position:relative;top:50px;display:block;float:left;}
+        .ie8 [data-section-name="spec"] article .info table a.catalogue {border: 2px solid #fff;}
+        .ie8 [data-section-name="spec"] article .info table a.catalogue:after {background-image:url('//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/download_icon_ie8.png');}
+        .ie8 [data-section-name="spec"] button {position:absolute;bottom:200px;left:50%;margin:0 0 0 -90px;}
+        .ie8 .page-navigation {position:absolute;bottom:0;}
+
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a { text-indent: 0 !important; font-size: 0; background-color:#fff !important;}
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a .icon { text-indent: 0 !important; }
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a .icon:before { content: "+"; font-size: 40px; font-weight: bold; text-align: center; color: #000; background: none !important; opacity: 1;display:block !important; }
+        .ie8 .scrollify[data-section-name="spec"] article .image-group a .icon:after { content: none; }
+
+
+        .swiper-container {
+            margin:0 auto;
+            position:relative;
+            direction:ltr;
+            -webkit-backface-visibility:hidden;
+            -moz-backface-visibility:hidden;
+            -ms-backface-visibility:hidden;
+            -o-backface-visibility:hidden;
+            backface-visibility:hidden;
+            z-index:1;
+        }
+        .swiper-wrapper {
+            position:relative;
+            width:100%;
+            -webkit-transition-property:-webkit-transform, left, top;
+            -webkit-transition-duration:0s;
+            -webkit-transform:translate3d(0px,0,0);
+            -webkit-transition-timing-function:ease;
+            
+            -moz-transition-property:-moz-transform, left, top;
+            -moz-transition-duration:0s;
+            -moz-transform:translate3d(0px,0,0);
+            -moz-transition-timing-function:ease;
+            
+            -o-transition-property:-o-transform, left, top;
+            -o-transition-duration:0s;
+            -o-transform:translate3d(0px,0,0);
+            -o-transition-timing-function:ease;
+            -o-transform:translate(0px,0px);
+            
+            -ms-transition-property:-ms-transform, left, top;
+            -ms-transition-duration:0s;
+            -ms-transform:translate3d(0px,0,0);
+            -ms-transition-timing-function:ease;
+            
+            transition-property:transform, left, top;
+            transition-duration:0s;
+            transform:translate3d(0px,0,0);
+            transition-timing-function:ease;
+
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+        .swiper-free-mode > .swiper-wrapper {
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            -ms-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            margin: 0 auto;
+        }
+        .swiper-slide {
+        }
+
+        .swiper-wp8-horizontal {
+            -ms-touch-action: pan-y;
+        }
+        .swiper-wp8-vertical {
+            -ms-touch-action: pan-x;
+        }
+    </style>
+    <!-- // @Header (css) -->
+
+    <!--[if lt IE 9]>
+        <script src="./common/js/modern.lib.min.js"></script>
+    <![endif]-->
+</head>
+<div class="cookie-warning"><!--/* [D] When GNB is open, add the class 'gb-gnb-open' to body tag -->
+<div id="wrap">
+<!-- @Header (HTML) -->
+  <header id="header" role="banner">
+  </header>
+<!-- //@Header (HTML) -->
+    <div id="content" role="main">
+<!-- @Body(HTML) -->
+    <!-- lnb -->
+    <div class="sticky">
+      <nav>
+        <h1 class="lnb-logo">
+          <a href="../highlights.html" class="tf-logo" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:lnb:the frame" title="Aller à la page d'accueil"><img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/tf_logo.png?$ORIGIN_PNG$" alt="Logo The Frame"></a>
+        </h1>
+        <div class="lnb-item-wrap">
+          <ul class="lnb-item-group">
+            <li class="lnb-item"><a href="../highlights.html" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:lnb:the frame" title="Aller à la page d'accueil">Accueil</a></li>
+            <li class="lnb-item mob-col-3 is-active">
+            <a href="../content.html" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:lnb:frame content" title="Aller à la page Contenu">Contenu</a></li>
+            <li class="lnb-item mob-col-3">
+            <a href="../design.html" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:lnb:frame design" title="Aller à la page Design">Design</a></li>
+            <li class="lnb-item mob-col-3">
+            <a href="../4kuhdtv.html" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:lnb:4k uhd tv" title="Aller à la page TV UHD 4K">TV UHD 4K</a></li>
+          </ul>
+          <span class="bar"></span>
+          <span class="buynow"><a href="http://www.samsung.com/fr/theframe/shop/" class="fill--shadow" data-omni-type="microsite_buyAction" data-omni="vd mkt page_the frame:lnb:buy now|;the frame|UN55LS003AFXZA" title="Ouvrir dans un nouvel onglet"><span class="cont">PRÉCOMMANDER</span></a></span>
+        </div>
+      </nav>
+    </div>
+    <!-- // lnb -->
+    <div id="contents" class="theframe_wrap" data-omni-page="theframe">
+      <div class="load_dimd" style="position:fixed; width:100%; height:100%; background:#fff; z-index:99999;top:0; left:0;"></div>
+      <!-- accessibility btn -->
+      <a id="accessibility" href="#" title="View page in high-contrast">
+        <span>c</span>
+      </a>
+      <!-- // accessibility btn -->
+
+            <!-- key visual -->
+            <section class="m_content_highlight_kv">
+          <div class="scroll-guide fadeIn"><a href="#" aria-label="go to art mode" data-omni-type="microsite_pcontentinter" data-omni="vd mkt page_the frame:scroll to continue">Faites défiler&nbsp;<span>pour continuer</span></a></div>
+          <article class="m_feature-kv">
+              <div class="inner">
+                  <div class="text_box">
+                      <h2 class="tit"><span class="enter">Faites</span><span class="enter">entrer l'art</span> <span>chez vous</span></h2>
+                      <div class="play-ctrl">
+                        <button class="fill--brown play-btn circle" data-play-id="1" data-omni-type="microsite_usstyle" data-omni="vd mkt page_the frame:frame content:kv enhance your everyday space with art_video" style="opacity: 1;" title="FrameContent key visual"><span class="triangle">▷</span></button>
+                        <span class="cont" style="opacity: 1;"></span>
+                      </div>
+                  </div>    
+              </div>
+              <div class="f_container">
+                  <div class="kv_img">
+                    <figure>
+                       <img alt="The Frame sur une étagère dans un salon." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_01_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_01_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_01.jpg?$ORIGIN_JPG$">
+                    </figure>
+                    <figure class="android_loop">
+                       <img alt="Gros plan de The Frame suspendu au mur qui affiche une photo de famille parmi d'autres tableaux." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_02_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_02_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_02.jpg?$ORIGIN_JPG$">
+                    </figure>
+                    <figure class="android_loop">
+                       <img alt="The Frame vu du côté droit, suspendu au mur de la cuisine et affichant une peinture." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_03_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_03_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_03.jpg?$ORIGIN_JPG$">
+                    </figure>
+                    <figure class="android_loop">
+                       <img alt="The Frame sur le pied Studio affiche de l'art et est placé loin du mur." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+                        data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_04_s.jpg?$ORIGIN_JPG$"
+                        data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_04_m.jpg?$ORIGIN_JPG$"
+                        data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/fd_main_visual_04.jpg?$ORIGIN_JPG$">
+                    </figure>
+                  </div>
+                  
+                  <figure class="kv_video">
+                    <video muted playsinline class="video-js vjs-default-skin" preload="auto" data-setup="{}">
+                      <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.mp4" type="video/mp4">
+                      <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.ogv" type="video/ogv">
+                      <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.webm" type="video/webm">
+                    </video>
+                    <figcaption>Vidéo de The Frame vu dans sous différents réglages, sur une étagère dans un salon, accroché au mur affichant une photo familiale avec d'autres cadres, sur un mur de cuisine affichant une peinture, sur son pied exposant une oeuvre et placé loin du mur.</figcaption>
+                  </figure>
+
+                  
+              </div>
+
+              <div class="bg lft"></div>
+              <div class="bg rgh"></div>
+              <div class="bg btm"></div>
+          </article>
+      </section>
+
+            <section class="m_content_artmode art_mode_area">
+        <article class="m_feature-mf1">
+                <div class="frame_box">
+                    <div class="para">
+                  <p class="stit">Mode Art</p>
+                  <h3 class="tit">Une source d'inspiration au quotidien</h3>
+                  <p class="txt">Exposez une création ou vos propres photos avec un réalisme semblable à celui d’un tableau. Votre intérieur prend vie avec The Frame.</p>
+              </div>
+                </div>
+
+                <div class="frame_img f_container">
+            <figure>
+              <img alt="Le cadre est accroché au le mur avec son écran divisé en deux mode illustrant le mode Art à gauche et le mode TV à droite." src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/blank.png?$ORIGIN_PNG$"
+              data-media-s1="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/img_artmode_s.jpg?$ORIGIN_JPG$"
+              data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/img_artmode.jpg?$ORIGIN_JPG$">
+            </figure>
+          </div>
+        </article>
+            </section>
+
+            <div class="collection_area">
+                <div class="frame_box" >
+                    <div class="para">
+                        <p class="stit">Samsung Collection</p>
+                        <h3 class="tit">Une collection d'art en un seul tableau</h3>
+                        <p class="txt"><span class="enter">The Frame embarque des œuvres d'artistes de renommée mondiale.
+                        Samsung Collection vous propose des œuvres uniques et vous fait vivre une expérience incomparable.</span></p>
+                    </div>
+                </div>
+                <div class="filter_btn swiper-container">
+                    <ul class="swiper-wrapper">
+                          <li class="swiper-slide on">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_landscapes"><span class="tit"><em>Paysages</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_01.jpg" alt="Veld 09, Noordoostpolder"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_patterns"><span class="tit"><em>Motifs</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_01.jpg" alt="Lightning"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_still life"><span class="tit"><em>Nature morte</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_01.jpg" alt="Beyond The Half"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_digital art"><span class="tit"><em>Art digital</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_01.jpg" alt="Light Echoes - Untitled 7"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_urban abstract"><span class="tit"><em>Street Art</em> <i>(10)</i></span><span class="img"><img class="line" src="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_04.jpg" alt="Untitled"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_from above"><span class="tit"><em>Vu du ciel</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_01.jpg" alt="Sandbanks on the coast of Whitsunday Island, Queensland, Australia (20°15' S – 149°01' E)"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_action"><span class="tit"><em>Action</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/action_01.jpg" alt="Waimea Six Pack"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_architecture"><span class="tit"><em>Architecture</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_01.jpg" alt="Blue Patio"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_drawing"><span class="tit"><em>Dessin</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_01.jpg" alt="ada and audre (Nothing Between Us)"></span></a>
+                          </li>
+                          <li class="swiper-slide">
+                            <a href="#none" data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:samsung collection:theme_wild life"><span class="tit"><em>Vie Sauvage</em> <i>(10)</i></span><span class="img"><img src="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_01.jpg" alt="Kalahari Butterflies"></span></a>
+                          </li>
+                    </ul>
+                </div>
+                 <div class="gallery_page"></div>
+                
+                <div class="viewSlider">
+                    <button class="prev btn" data-omni-type="microsite_gallery" data-omni="vd mkt page_the frame:samsung collection:left arrow_landscapes"><span class="icon">prev</span></button>
+                    <button class="next btn" data-omni-type="microsite_gallery" data-omni="vd mkt page_the frame:samsung collection:right arrow_landscapes"><span class="icon">next</span></button>
+                    <button class="viewSlider_close">close</button>
+                    <div class="collection">
+                    <!-- 액션 -->
+                    <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_01.jpg" data-category="Action" data-updated="yes" data-title="Waimea Six Pack" data-artist="John Severson " data-cont="USA" data-year="1963">Waimea Six Pack</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_02.jpg" data-category="Action" data-updated="yes" data-title="Ho’okipa Charge" data-artist="John Severson " data-cont="USA" data-year="1986">Ho’okipa Charge</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_03.jpg" data-category="Action" data-updated="yes" data-title="Sun Surf" data-artist="John Severson " data-cont="USA" data-year="1984">Sun Surf</a>
+                  
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_04.jpg" data-category="Action" data-updated="yes" data-title="Snow Trail" data-artist="Oskar Enander" data-cont="Sweden" data-year="2013">Snow Trail </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_05.jpg" data-category="Action" data-updated="yes" data-title="Inversion" data-artist="Oskar Enander" data-cont="Sweden" data-year="2012">Inversion</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_06.jpg" data-category="Action" data-updated="yes" data-title="The Next Step " data-artist="Oskar Enander" data-cont="Sweden" data-year="2011">The Next Step </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_07.jpg" data-category="Action" data-updated="yes" data-title="Alaskan Shadow" data-artist="Oskar Enander" data-cont="Sweden" data-year="2009">Alaskan Shadow </a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_08.jpg" data-category="Action" data-updated="yes" data-mobile="mobile" data-title="Escape Series #2" data-artist="Chris Muir" data-cont="Canada" data-year="2011">Escape Series #2</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_09.jpg" data-category="Action" data-updated="yes" data-title="Escape Series #3" data-artist="Chris Muir" data-cont="Canada" data-year="2011">Escape Series #3</a>
+                 
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/action_10.jpg" data-category="Action" data-updated="yes" data-title="A Sea of Granite" data-artist="Jeff Johnson" data-cont="USA" data-year="2007">A Sea of Granite</a>
+                    <!-- //액션 -->
+                    <!-- architecture -->
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_01.jpg" data-category="Architecture" data-updated="yes" data-title="Blue Patio" data-artist="Nacho Alegre " data-cont="Spain" data-year="2015">Blue Patio</a>
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_02.jpg" data-category="Architecture" data-updated="yes" data-title="Rooftop pool" data-artist="Nacho Alegre " data-cont="Spain" data-year="2015">Rooftop pool</a>
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_03.jpg" data-category="Architecture" data-updated="yes" data-title="South view" data-artist="Nacho Alegre " data-cont="Spain" data-year="2015">South view</a>
+                   
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_04.jpg" data-category="Architecture" data-updated="yes" data-title="Stair" data-artist="Todd Eberle" data-cont="USA" data-year="1998" data-line="true">Stair</a>
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_05.jpg" data-category="Architecture" data-updated="yes" data-title="Niterói Contemporary Art Museum" data-artist="Todd Eberle" data-cont="USA" data-year="2003" data-line="true">Niterói Contemporary Art Museum</a>
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_06.jpg" data-category="Architecture" data-updated="yes" data-title="Skylight" data-artist="Todd Eberle" data-cont="USA" data-year="1999" data-line="true">Skylight</a>
+                   
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_07.jpg" data-category="Architecture" data-updated="yes" data-title="Approaching Shadow" data-artist="Fan Ho" data-cont="Hong Kong" data-year="1954">Approaching Shadow</a>
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_08.jpg" data-category="Architecture" data-updated="yes" data-title="Pattern" data-artist="Fan Ho" data-cont="Hong Kong" data-year="1956">Pattern</a>
+                   
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_09.jpg" data-category="Architecture" data-updated="yes" data-title="Untitled (Blind Room)" data-artist="Luisa Lambri" data-cont="Italy" data-year="1998" data-line="true">Untitled (Blind Room)</a>
+                   <a href="/content/dam/samsung/fr/tvs/theframe/content/art/architecture_10.jpg" data-category="Architecture" data-updated="yes" data-title="Untitled (Gifu Apartments)" data-artist="Luisa Lambri" data-cont="Italy" data-year="2000" data-line="true">Untitled (Gifu Apartments)</a>
+                  <!-- //architecture -->
+                  <!-- landscapes -->
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_01.jpg" data-category="Paysages" data-updated="yes" data-title="Veld 09, Noordoostpolder" data-artist="David Burdeny" data-cont="Canada" data-year="2016">Veld 09, Noordoostpolder</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_02.jpg" data-category="Paysages" data-updated="yes" data-title="lceberg 02, Disko Bay, Greenland" data-artist="David Burdeny" data-cont="Canada" data-year="1981">lceberg 02, Disko Bay, Greenland</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_03.jpg" data-category="Paysages" data-updated="yes" data-title="Saltern Study 19, Great Salt Lake, UT" data-artist="David Burdeny" data-cont="Canada" data-year="2015">Saltern Study 19, Great Salt Lake, UT</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_04.jpg" data-category="Paysages" data-updated="yes" data-title="Salt Flat And Stream, Sea of Cortez, Mexico" data-artist="David Burdeny" data-cont="Canada" data-year="2016">Salt Flat And Stream, Sea of Cortez, Mexico</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_05.jpg" data-category="Paysages" data-updated="yes" data-title="Five Icebergs_Weddell Sea, Antarctica" data-artist="David Burdeny" data-cont="Canada" data-year="2007">Five Icebergs_Weddell Sea, Antarctica</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_06.jpg" data-category="Paysages" data-updated="yes" data-title="Spirit Infinity, Death Valley, California" data-artist="David Benjamin Sherry" data-cont="USA" data-year="2015">Spirit Infinity, Death Valley, California</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_07.jpg" data-category="Paysages" data-updated="yes" data-title="Cathedral Peak" data-artist="Cody Cobb" data-cont="USA" data-year="2011">Cathedral Peak</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_08.jpg" data-category="Paysages" data-updated="yes" data-title="Colchuck Lake" data-artist="Cody Cobb" data-cont="USA" data-year="1981">Colchuck Lake</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_09.jpg" data-category="Paysages" data-updated="yes" data-title="Caddo Lake" data-artist="Cody Cobb" data-cont="USA" data-year="2016">Caddo Lake</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/landscapes_10.jpg" data-category="Paysages" data-updated="yes" data-title="Zabriskie Point" data-artist="Cody Cobb" data-cont="USA" data-year="2016">Zabriskie Point</a>
+                  <!-- //landscapes -->
+                  <!-- patterns -->
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_01.jpg" data-category="Motifs" data-updated="yes" data-title="Lightning" data-artist="Sarrita King" data-cont="Australia" data-year="2007">Lightning</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_02.jpg" data-category="Motifs" data-updated="yes" data-title="Lightning" data-artist="Sarrita King" data-cont="Australia" data-year="2016">Lightning</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_03.jpg" data-category="Motifs" data-updated="yes" data-title="Sunset Strip" data-artist="Sebastien Leon" data-cont="France" data-year="2016">Sunset Strip</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_04.jpg" data-category="Motifs" data-updated="yes" data-title="New Millenium" data-artist="Sebastien Leon" data-cont="France" data-year="2015">New Millenium</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_05.jpg" data-category="Motifs" data-updated="yes" data-title="Untitled" data-artist="Clare E. Rojas" data-cont="USA" data-year="2016">Untitled</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_06.jpg" data-category="Motifs" data-updated="yes" data-title="Untitled" data-artist="Clare E. Rojas" data-cont="USA" data-year="2017">Untitled</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_07.jpg" data-category="Motifs" data-updated="yes" data-title="Untitled" data-artist="Clare E. Rojas" data-cont="USA" data-year="2017">Untitled</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_08.jpg" data-category="Motifs" data-updated="yes" data-title="Fortress" data-artist="Blaise Rosenthal" data-cont="USA" data-year="2010">Fortress</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_09.jpg" data-category="Motifs" data-updated="yes" data-title="Screamsaver 3" data-artist="Tobias Rehberger" data-cont="Germany" data-year="2016">Screamsaver 3</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/pattern_10.jpg" data-category="Motifs" data-updated="yes" data-title="Screamsaver 1" data-artist="Tobias Rehberger" data-cont="Germany" data-year="2016">Screamsaver 1</a>
+                  <!-- //patterns -->
+                  
+                  <!--still life-->
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_01.jpg" data-category="Nature morte" data-updated="yes" data-title="Beyond The Half" data-artist="J. Ariadhitya Pramuhendra" data-cont="Indonesia" data-year="2013">Beyond The Half</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_02.jpg" data-category="Nature morte" data-updated="yes" data-title="Still Life From Heaven" data-artist="J. Ariadhitya Pramuhendra" data-cont="Indonesia" data-year="2016">Still Life From Heaven</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_03.jpg" data-category="Nature morte" data-updated="yes" data-title="2 Pitchers and Fruits " data-artist="Holly Coulis" data-cont="Canada" data-year="2017">2 Pitchers and Fruits</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_04.jpg" data-category="Nature morte" data-updated="yes" data-title="Lemons In, and Out, of Vase" data-artist="Holly Coulis" data-cont="Canada" data-year="2017">Lemons In, and Out, of Vase</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_05.jpg" data-category="Nature morte" data-updated="yes" data-title="Row of Figs and Bowls" data-artist="Holly Coulis" data-cont="Canada" data-year="2017">Row of Figs and Bowls </a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_06.jpg" data-category="Nature morte" data-updated="yes" data-title="Untitled (Life and death, purple iris)" data-artist="Sam Falls" data-cont="USA" data-year="2014" data-line="true">Untitled (Life and death, purple iris)</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_07.jpg" data-category="Nature morte" data-updated="yes" data-title="Untitled (Life and death, easter lilies)" data-artist="Sam Falls" data-cont="USA" data-year="2014" data-line="true">Untitled (Life and death, easter lilies)</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_08.jpg" data-category="Nature morte" data-updated="yes" data-title="HA 01 BW PAN" data-artist="Bohnchang Koo" data-cont="South Korea" data-year="2005">HA 01 BW PAN</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_09.jpg" data-category="Nature morte" data-updated="yes" data-title="JM-GD 14 PAN" data-artist="Bohnchang Koo" data-cont="South Korea" data-year="2006">JM-GD 14 PAN</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/stilllife_10.jpg" data-category="Nature morte" data-updated="yes" data-title="SL 007" data-artist="Bohnchang Koo" data-cont="South Korea" data-year="1997">SL 007</a>
+                  <!--//still life-->
+                  <!--digital art-->
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_01.jpg" data-category="Art digital" data-updated="yes" data-title="Light Echoes - Untitled 7 " data-artist="Aaron Koblin + Ben Tricklebank" data-cont="USA" data-year="2013">Light Echoes - Untitled 7 </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_02.jpg" data-category="Art digital" data-updated="yes" data-title="Light Echoes - Untitled 4" data-artist="Aaron Koblin + Ben Tricklebank" data-cont="USA" data-year="2013">Light Echoes - Untitled 4</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_03.jpg" data-category="Art digital" data-updated="yes" data-title="Divergence" data-artist="Yoshi Sodeoka" data-cont="Japan" data-year="2016">Divergence</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_04.jpg" data-category="Art digital" data-updated="yes" data-title="Infinite Horizon" data-artist="Yoshi Sodeoka" data-cont="Japan" data-year="2015">Infinite Horizon </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_05.jpg" data-category="Art digital" data-updated="yes" data-title="Perpetual Sunset " data-artist="Yoshi Sodeoka" data-cont="Japan" data-year="2015">Perpetual Sunset </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_06.jpg" data-category="Art digital" data-updated="yes" data-title="Seashore, Time Laps " data-artist="Yoshi Sodeoka" data-cont="Japan" data-year="2015">Seashore, Time Laps </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_07.jpg" data-category="Art digital" data-updated="yes" data-title="Spectrum Ellipses " data-artist="Yoshi Sodeoka" data-cont="Japan" data-year="2015">Spectrum Ellipses </a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_08.jpg" data-category="Art digital" data-updated="yes" data-title="Resting Mirror" data-artist="LaTurbo Avedon" data-cont="Internet" data-year="2014">Resting Mirror</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_09.jpg" data-category="Art digital" data-updated="yes" data-title="Field With First Visitor" data-artist="LaTurbo Avedon" data-cont="Internet" data-year="2013">Field With First Visitor</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/digitalart_10.jpg" data-category="Art digital" data-updated="yes" data-title="Body" data-artist="LaTurbo Avedon" data-cont="Internet" data-year="2013">Body</a>
+                  <!--//digital art-->
+                  <!--urban abstract-->
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_01.jpg" data-category="Street Art" data-updated="yes" data-title="Untitled" data-artist="Barry McGee" data-cont="USA" data-year="2014" data-line="true">Untitled</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_02.jpg" data-category="Street Art" data-updated="yes" data-title="Untitled" data-artist="Barry McGee" data-cont="USA" data-year="2012">Untitled</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_03.jpg" data-category="Street Art" data-updated="yes" data-title="Untitled" data-artist="Barry McGee" data-cont="USA" data-year="2012">Untitled</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_04.jpg" data-category="Street Art" data-updated="yes" data-title="Untitled" data-artist="Barry McGee" data-cont="USA" data-year="2015">Untitled</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_05.jpg" data-category="Street Art" data-updated="yes" data-title="Landscape of Peace " data-artist="Eko Nugroho" data-cont="Indonesia" data-year="2016">Landscape of Peace </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_06.jpg" data-category="Street Art" data-updated="yes" data-title="Love, Life and Freedom" data-artist="Eko Nugroho" data-cont="Indonesia" data-year="2016">Love, Life and Freedom</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_07.jpg" data-category="Street Art" data-updated="yes" data-title="We are Part of the Nature" data-artist="Eko Nugroho" data-cont="Indonesia" data-year="2016">We are Part of the Nature</a>
+                  
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_08.jpg" data-category="Street Art" data-updated="yes" data-title="5th Dimensional Love Machine" data-artist="Remed" data-cont="France" data-year="2012">5th Dimensional Love Machine</a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_09.jpg" data-category="Street Art" data-updated="yes" data-title="L’Eau Met Deux Flammes " data-artist="Remed" data-cont="France" data-year="2016">L’Eau Met Deux Flammes </a>
+                  <a href="/content/dam/samsung/fr/tvs/theframe/content/art/urbanabstract_10.jpg" data-category="Street Art" data-updated="yes" data-title="Orion, Kanaal & The Message" data-artist="Remed" data-cont="France" data-year="2014">Orion, Kanaal &amp; The Message</a>
+                 <!--//urban abstract-->
+                 <!--from above-->
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_01.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Sandbanks on the coast of Whitsunday Island, Queensland, Australia (20°15' S – 149°01' E) " data-artist="Yann-Arthus Bertrand" data-cont="France" data-year="1995">Sandbanks on the coast of Whitsunday Island, Queensland, Australia (20°15' S – 149°01' E) </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_02.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Tsingy of Bemaraha, Morondava region, Madagascar (19°02' S - 44°47' E)" data-artist="Yann-Arthus Bertrand" data-cont="France" data-year="1998">Tsingy of Bemaraha, Morondava region, Madagascar (19°02' S - 44°47' E)</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_03.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Crystalline formation on lake Magadi, Kenya (1°52’ S – 36°17’ E) " data-artist="Yann-Arthus Bertrand" data-cont="France" data-year="1993">Crystalline formation on lake Magadi, Kenya (1°52’ S – 36°17’ E) </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_04.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Cotton fabric drying in the sun in Jaipur, Rajasthan, India (N 26°45' E 75°49') " data-artist="Yann-Arthus Bertrand" data-cont="France" data-year="1999">Cotton fabric drying in the sun in Jaipur, Rajasthan, India (N 26°45' E 75°49') </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_05.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Vineyards protected by curved walls, region of La Geria, Lanzarote
+                island, Canary Islands, Spain (28°58' N – 13°43' W) " data-artist="Yann-Arthus Bertrand" data-cont="France" data-year="1994">Vineyards protected by curved walls, region of La Geria, Lanzarote island, Canary Islands, Spain (28°58' N – 13°43' W) </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_06.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Women at a well near Khudiala, Rajasthan, India (26°26' N, 72°40' E) " data-artist="Yann-Arthus Bertrand" data-cont="France" data-year="2008">Women at a well near Khudiala, Rajasthan, India (26°26' N, 72°40' E) </a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_07.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Lagoon" data-artist="Tommy Clarke" data-cont="UK" data-year="2016">Lagoon</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_08.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Sand" data-artist="Tommy Clarke" data-cont="UK" data-year="2016">Sand</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_09.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Playa Shoreline " data-artist="Tommy Clarke" data-cont="UK" data-year="2015">Playa Shoreline </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/fromabove_10.jpg" data-category="Vu du ciel" data-updated="yes" data-title="Black Rock" data-artist="Tommy Clarke" data-cont="UK" data-year="2015">Black Rock</a>
+                 <!--//from above-->
+                 <!--drawing-->
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_01.jpg" data-category="Dessin" data-updated="yes" data-title="ada and audre (Nothing Between Us)" data-artist="ruby onyinyechi amanze" data-cont="Nigeria" data-year="2016">ada and audre (Nothing Between Us)</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_02.jpg" data-category="Dessin" data-updated="yes" data-title="Carrying ours " data-artist="ruby onyinyechi amanze" data-cont="Nigeria" data-year="2016">Carrying ours </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_03.jpg" data-category="Dessin" data-updated="yes" data-title="For the Love of (normal) Strangeness " data-artist="ruby onyinyechi amanze" data-cont="Nigeria" data-year="2016">For the Love of (normal) Strangeness </a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_04.jpg" data-category="Dessin" data-updated="yes" data-title="Constructing Jungle IV" data-artist="Yun-Kyung Jeong" data-cont="South Korea" data-year="2010">Constructing Jungle IV</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_05.jpg" data-category="Dessin" data-updated="yes" data-title="Structural Sensibility I" data-artist="Yun-Kyung Jeong" data-cont="South Korea" data-year="2016">Structural Sensibility I</a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_06.jpg" data-category="Dessin" data-updated="yes" data-title="Holiday Inn Express & Suites, Minneapolis " data-artist="Leanne Shapton" data-cont="Canada" data-year="2012">Holiday Inn Express &amp; Suites, Minneapolis </a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_07.jpg" data-category="Dessin" data-updated="yes" data-title="Hannah’s Shell Collection" data-artist="David Wilson" data-cont="USA" data-year="2008">Hannah’s Shell Collection</a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_08.jpg" data-category="Dessin" data-updated="yes" data-title="Leaves Yellow " data-artist="Clare E. Rojas" data-cont="USA" data-year="2016">Leaves Yellow </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_09.jpg" data-category="Dessin" data-updated="yes" data-title="Black Line" data-artist="Clare E. Rojas" data-cont="USA" data-year="2016">Black Line</a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/drawing_10.jpg" data-category="Dessin" data-updated="yes" data-title="Area II" data-artist="Blaise Rosenthal" data-cont="USA" data-year="2011">Area II </a>
+                 <!--//drawing-->
+                 <!--wildlife-->
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_01.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Kalahari Butterflies" data-artist="Scott Ramsay" data-cont="South-Africa" data-year="2013">Kalahari Butterflies</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_02.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Mana Pools Bee-eaters " data-artist="Scott Ramsay" data-cont="South-Africa" data-year="2015">Mana Pools Bee-eaters </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_03.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Imfolozi Giraffe" data-artist="Scott Ramsay" data-cont="South-Africa" data-year="2011">Imfolozi Giraffe</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_04.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Kafue Lion " data-artist="Scott Ramsay" data-cont="South-Africa" data-year="2016">Kafue Lion </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_05.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Namibia Elephants " data-artist="Scott Ramsay" data-cont="South-Africa" data-year="2014">Namibia Elephants </a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_06.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Vortex" data-artist="Wolf Ademeit" data-cont="Germany" data-year="2009">Vortex</a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_07.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Little Fighters " data-artist="Wolf Ademeit" data-cont="Germany" data-year="2009">Little Fighters </a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_08.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Aleph" data-artist="Anuar Patjane" data-cont="Mexico" data-year="2015">Aleph</a>
+                 
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_09.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="The open sky" data-artist="Palani Mohan" data-cont="Australia" data-year="2014">The open sky </a>
+                 <a href="/content/dam/samsung/fr/tvs/theframe/content/art/wildlife_10.jpg" data-category="Vie Sauvage" data-updated="yes" data-title="Tall grass" data-artist="Palani Mohan" data-cont="Australia" data-year="2014">Tall grass</a>
+                 <!--//wildlife-->
+                </div>
+                    <div class="paging">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="m_content_product product_area">
+                <div class="inner">
+                    <div class="spec_desc s1">
+                        <div class="frame_cont" >
+                            <div class="frame_box" >
+                                <div class="para">
+                                    <p class="stit">Art Store</p>
+                            <h3 class="tit"><span class="enter">Ajoutez de nouvelles œuvres</span> à chaque instant</h3>
+                            <p class="txt">L'Art Store contient une large collection d'œuvres d'art disponibles en téléchargement à l'unité ou via un service d'abonnement en ligne. Choisissez parmi des œuvres du style classique au style contemporain.</p>
+                            <!-- <p class="txt">We don't need to display this disclaimer, it was legally approved.</p> -->
+                                </div>
+                            </div>
+                            <div  class="frame_img Mask_Motion">
+                                <figure >
+                          <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/bg_gallery.jpg?$ORIGIN_JPG$" class="pc_img" alt="The Frame est posé sur pied, affiche une photo de paysage et est positionné à côté d'œuvres d'art.">
+                          <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/bg_gallery_m.jpg?$ORIGIN_JPG$" class="tablet_img" alt="The Frame est posé sur pied, affiche une photo de paysage et est positionné à côté d'œuvres d'art.">
+                          <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/bg_gallery_s.jpg?$ORIGIN_JPG$" class="mobile_img" alt="The Frame est posé sur pied, affiche une photo de paysage et est positionné à côté d'œuvres d'art.">
+                        </figure>
+                            </div>
+                        </div><!--frame_cont-->
+                    </div>
+                    <div class="spec_desc s2 imgRgh">
+                        <div class="frame_cont frame_bd">
+                            <div class="square top lft" data-size="23%"></div>
+                            <div class="frame_box" >
+                                <div class="para">
+                                    <p class="stit">Disposition et couleur</p>
+                                    <h3 class="tit"><span class="enter">Mettez en valeur vos œuvres avec différentes options</span></h3>
+                                    <p class="txt"><span class="pc_br">Personnalisez facilement la présentation des œuvres sur The Frame pour une intégration optimale dans votre intérieur. Choisissez parmi plusieurs dispositions et couleurs d'encadrement pour mettre en valeur vos œuvres*.</p>
+                                    <p class="refer_text">*Certaines options de disposition sont disponibles uniquement avec l’application mobile</p>
+                                    <div class="spec_img">
+                                      <div class="slide_info">
+                                        <strong>Disposition des oeuvres</strong>
+                                        <ul class="list_layout">
+                                          <li class="on">
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Encadrement ombré</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Sans encadrement</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Marie-Louise</i>
+                                          </li>
+                                        </ul>
+
+                                        <strong>Disposition des photos</strong>
+                                        <ul class="list_layout">
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Encadrement ombré</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Marie-Louise</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Carrés</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Mixte</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Triptyque</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_on.gif" alt="">
+                                            </span>
+                                            <span class="icon bw">
+                                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_bw.gif" alt="">
+                                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_on_bw.gif" alt="">
+                                            </span>
+                                            <i>Panoramique</i>
+                                          </li>
+                                        </ul>
+
+                                        <strong>Couleur de l'encadrement</strong>
+                                        <ul class="list_color">
+                                          <li class="on">
+                                            <span class="icon white"><i></i></span>
+                                            <i>Blanc polaire</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon warm"><i></i></span>
+                                            <i>Blanc lunaire</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon antique"><i></i></span>
+                                            <i>Beige</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon neutral"><i></i></span>
+                                            <i>Gris</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon black"><i></i></span>
+                                            <i>Noir</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon sand"><i></i></span>
+                                            <i>Sable</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon seafoam"><i></i></span>
+                                            <i>Gris bleu</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon sage"><i></i></span>
+                                            <i>Vert sauge</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon brugandy"><i></i></span>
+                                            <i>Bordeaux</i>
+                                          </li>
+                                          <li>
+                                            <span class="icon navy"><i></i></span>
+                                            <i>Bleu marine</i>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frame_img">
+                                <div class="frameSlide Mask_Motion">
+                                    <div class="swiper-wrapper">
+                                        <figure class="swiper-slide" data-choice="0,0,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img1.jpg?$ORIGIN_JPG$" alt="The Frame en mode encadrement est accroché au mur d'un salon au-dessus d'une cheminée." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img1_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img1.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on.gif" alt="">
+                                    <span>Encadrement ombré</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="1,5,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img2.jpg?$ORIGIN_JPG$" alt="The Frame affiche une photographie d'un coucher de soleil dans son mode. On peut voir un piano à côté de The Frame." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img2_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img2.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_on.gif" alt="">
+                                    <span>Panoramique</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="0,1">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img3.jpg?$ORIGIN_JPG$" alt="The Frame affiche une photo sans encadrement dans le coin d'une pièce à l'écart du mur." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img3_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img3.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_on.gif" alt="">
+                                    <span>Sans encadrement</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="1,3,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img4.jpg?$ORIGIN_JPG$" alt="The Frame affiche une photographie familiale dans une disposition mixte." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img4_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img4.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_on.gif" alt="">
+                                    <span>Mixte</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="1,2,1">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img5.jpg?$ORIGIN_JPG$" alt="The Frame affiche trois photographies dans un mode carré." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img5_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img5.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_on.gif" alt="">
+                                    <span>Carrés</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="0,2,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img6.jpg?$ORIGIN_JPG$" alt="The Frame affiche une oeuvre d'art dans le mode Marie-Louise, dans une chambre d'adolescent." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img6_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img6.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_on.gif" alt="">
+                                    <span>Marie-Louise</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="0,2,2">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img7.jpg?$ORIGIN_JPG$" alt="The Frame présente une oeuvre d'art dans la disposition moderne." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img7_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img7.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_on.gif" alt="">
+                                    <span>Marie-Louise</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="1,0,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img8.jpg?$ORIGIN_JPG$" alt="The Frame est accroché sur le mur d'une la cuisine, affichant un portrait de famille dans son mode Encadrement." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img8_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img8.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on.gif" alt="">
+                                    <span>Encadrement ombré</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="1,4,2">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img9.jpg?$ORIGIN_JPG$" alt="Le cadre est accroché au mur d'une salle à manger et affiche trois photographies dans son mode Triptyque." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img9_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img9.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_on.gif" alt="">
+                                    <span>Triptyque</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="0,0,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img10.jpg?$ORIGIN_JPG$" alt="The Frame est accroché au mur au dessus d'une armoire et présente une œuvre dans son mode Encadrement." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img10_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img10.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on.gif" alt="">
+                                    <span>Encadrement ombré</span>
+                                  </figcaption>
+                                </figure>
+                                        <!-- <figure class="swiper-slide" data-choice="1,3,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img11.jpg?$ORIGIN_JPG$" alt="A man is walking past The Frame on the wall with other frames displaying photos in a dining area." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img11_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img11.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_on.gif" alt="">
+                                    <span>Mixed</span>
+                                  </figcaption>
+                                </figure> -->
+                                        <figure class="swiper-slide" data-choice="0,2,2">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img12.jpg?$ORIGIN_JPG$" alt="The Frame est monté sur un mur de briques dans le salon au-dessus d'une cheminée affichant une photographie." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img12_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img12.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on.gif" alt="">
+                                    <span>Marie-Louise</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="0,2,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img13.jpg?$ORIGIN_JPG$" alt="The Frame est suspendu à un mur de briques dans une salle à manger. Il affiche une photographie dans son mode Marie-Louise." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img13_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img13.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on.gif" alt="">
+                                    <span>Marie-Louise</span>
+                                  </figcaption>
+                                </figure>
+                                        <figure class="swiper-slide" data-choice="0,2,0">
+                                  <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img14.jpg?$ORIGIN_JPG$" alt="The Frame est suspendu au mur au-dessus d'un poêle dans une cuisine. Il présente une oeuvre d'art dans son mode Marie-Louise." data-media-s2="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img14_s.jpg?$ORIGIN_JPG$" data-media-s4="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/multiple_img14.jpg?$ORIGIN_JPG$">
+                                  <figcaption>
+                                    <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on.gif" alt="">
+                                    <span>Marie-Louise</span>
+                                  </figcaption>
+                                </figure>
+                                    </div>
+                                </div>
+                                <div class="pagenation"><button class="pause" data-omni-type="microsite_gallery" data-omni="vd mkt page_the frame:layout and color:rolling index_stop">Pause</button><span class="inner"></span></div>
+                            </div>
+                            <div class="spec_img_m">
+                      <div class="slide_info">
+                        <strong>Disposition des oeuvres</strong>
+                        <ul class="list_layout">
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_01_on_bw.gif" alt="">
+                            </span>
+                            <i>Encadrement ombré</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_02_on_bw.gif" alt="">
+                            </span>
+                            <i>Sans encadrement</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_03_on_bw.gif" alt="">
+                            </span>
+                            <i>Marie-Louise</i>
+                          </li>
+                        </ul>
+
+                        <strong>Disposition des photos</strong>
+                        <ul class="list_layout">
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_04_on_bw.gif" alt="">
+                            </span>
+                            <i>Encadrement ombré</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_05_on_bw.gif" alt="">
+                            </span>
+                            <i>Marie-Louise</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_06_on_bw.gif" alt="">
+                            </span>
+                            <i>Carrés</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_07_on_bw.gif" alt="">
+                            </span>
+                            <i>Mixte</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_08_on_bw.gif" alt="">
+                            </span>
+                            <i>Triptyque</i>
+                          </li>
+                          <li>
+                            <span class="icon">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_on.gif" alt="">
+                            </span>
+                            <span class="icon bw">
+                              <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_bw.gif" alt="">
+                              <img class="active" src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/icon_art_layout_09_on_bw.gif" alt="">
+                            </span>
+                            <i>Panoramique</i>
+                          </li>
+                        </ul>
+
+                        <strong>Couleur de l'encadrement</strong>
+                        <ul class="list_color">
+                          <li>
+                            <span class="icon white"><i></i></span>
+                            <i>Blanc polaire</i>
+                          </li>
+                          <li>
+                            <span class="icon warm"><i></i></span>
+                            <i>Blanc lunaire</i>
+                          </li>
+                          <li>
+                            <span class="icon antique"><i></i></span>
+                            <i>Beige</i>
+                          </li>
+                          <li>
+                            <span class="icon neutral"><i></i></span>
+                            <i>Gris</i>
+                          </li>
+                          <li>
+                            <span class="icon black"><i></i></span>
+                            <i>Noir</i>
+                          </li>
+                          <li>
+                            <span class="icon sand"><i></i></span>
+                            <i>Sable</i>
+                          </li>
+                          <li>
+                            <span class="icon seafoam"><i></i></span>
+                            <i>Gris bleu</i>
+                          </li>
+                          <li>
+                            <span class="icon sage"><i></i></span>
+                            <i>Vert sauge</i>
+                          </li>
+                          <li>
+                            <span class="icon brugandy"><i></i></span>
+                            <i>Bordeaux</i>
+                          </li>
+                          <li>
+                            <span class="icon navy"><i></i></span>
+                            <i>Bleu marine</i>
+                          </li>
+                        </ul>
+                      </div>    
+                    </div>
+                           
+                        </div><!--frame_cont-->
+                    </div>
+                    <div class="spec_desc s3">
+                        <div class="frame_cont" >
+                            <div class="frame_box" >
+                                <div class="para">
+                                    <p class="stit">Ma Collection</p>
+                                    <h3 class="tit"><span class="enter">Exposez vos photos comme des oeuvres d’art</span></h3>
+                                    <p class="txt"><span class="pc_br">Vous pouvez facilement télécharger et afficher vos photos personnelles.* Transférez les simplement sur The Frame via votre smartphone ou via une clé USB.</span> <span class="pc_br"> </span>  </p>
+                                    <p class="txt"><span class="pc_br">*Vos photos personnelles téléchargées sur The Frame seront affichées avec la résolution originale. Il est recommandé d'utiliser des images en résolution 4K et supérieur. Les images en dessous de 800x800 ne pourront pas être téléchargées.</span> <span class="pc_br"></p>
+                                </div>
+                            </div>
+                            <div class="frame_img Mask_Motion">
+                                <figure ><img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/img_spec1.jpg?$ORIGIN_JPG$" alt="The Frame affiche une photo d'un père et d'une fille sur la plage au coucher du soleil. Le téléviseur est accroché au mur au-dessus d'une cheminée dans le salon où une maman et son bébé se sourient sur le canapé."></figure>
+                            </div>
+                        </div><!--frame_cont-->
+                    </div>
+                    <div class="spec_desc s4 imgRgh">
+                        <div class="frame_cont" >
+
+                            <div class="frame_box" >
+                                <div class="para">
+                                    <p class="stit">Contrôle depuis votre smartphone</p>
+                            <h3 class="tit"><span class="enter">Téléchargez du contenu depuis votre mobile</span> </h3>
+                            <p class="txt"><span class="pc_br">Avec votre smartphone à portée de main, choisissez en quelques clics l'œuvre de votre choix. Ajustez les réglages ou cherchez une nouvelle œuvre à afficher directement depuis votre mobile.</span><span class="pc_br"> </p>
+                                </div>
+                            </div>
+                            <div class="frame_img Mask_Motion">
+                                <figure><img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/content/img_spec2.jpg?$ORIGIN_JPG$" alt="Un couple est assis sur un canapé avec la femme apparaissant à la télécommande The Frame avec le smartphone dans sa main et la collection Samsung figurant sur l'écran The Frame."></figure>
+                            </div>
+                        </div><!--frame_cont-->
+                    </div>
+                   
+                </div>
+            </div>
+            
+    <section class="scrollify" data-section-name="spec">
+        <h2>CARACTERISTIQUES</h2>
+        <article class="active">
+          <div class="image-group">
+            <ul>
+              <li class="active">
+                <img src="//stg-images.samsung.com/is/image/samsung/p5/fr/tvs/theframe/highlights/tmp_spec_1.png?$ORIGIN_PNG$" alt="Le cadre de The Frame est noir carbone. Un est un 65 pouce et l'autre un 55 pouce et sont positionnés debout et sont montrés du côté gauche.">
+              </li>
+            </ul>
+            <a href="javascript:;" class="fill--brown zoom circle" title="Cliquer pour agrandir l'image de The Frame." data-omni-type="microsite_contentinter" data-omni="vd mkt page_the frame:spec:zoom in_1"><span class="icon">Vue détaillée</span></a>
+          </div>
+          <div class="info">
+            <table>
+              <caption>Caractéristiques de The Frame</caption>
+              <tbody>
+                <tr class="inch">
+                  <th scope="row">Taille</th>
+                  <td>65”</td>
+                  <td>55”</td>
+                </tr>
+                <tr>
+                  <th scope="row">TAILLE*</th>
+                  <td>1454x829.4x42.5mm</td>
+                  <td>1235x706.3x42.5 mm</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qualité d'image</th>
+                  <td colspan="2">UHD 4K, HDR, Active Crystal Color</td>
+                </tr>
+                <tr>
+                  <th scope="row">Smart TV</th>
+                  <td colspan="2">Smart Hub Samsung 2017, Smart View, Une seule télécommande</td>
+                </tr>
+                <tr>
+                  <th scope="row">Audio</th>
+                  <td colspan="2">40W/2.2CH</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fonctionnalités</th>
+                  <td colspan="2">Mode Art, Samsung Collection, Capteur de luminosité, Capteur de mouvement</td>
+                </tr>
+                <tr>
+                  <th scope="row">Couleur du cadre</th>
+                  <td colspan="2">Noir Carbone</td>
+                </tr>
+                <tr class="separated">
+                  <th scope="row">Inclus dans le coffret</th>
+                  <td colspan="2">
+                    <ul>
+                      <li><b> </b>Boîtier One connect et son câble invisible (5 m)</li>
+                      <li><b> </b>Pied standard</li>
+                      <li><b> </b>Accroche murale ultra fine</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="separated">
+                  <th scope="row">Vendu séparément</th>
+                  <td colspan="2">
+                    <ul>
+                      <li><b>Cadres interchangeables</b>: coloris noyer, chêne et blanc</li>
+                      <li><b> </b>Pied Studio et pied Gravity</li>
+                      <li><b> </b>Kit de connexion invisible de 15 m</li>
+                    </ul>
+                    <!-- <a href="javascript:;" class="catalogue" data-omni-type="microsite_download" data-omni="vd mkt page_the frame:the frame catalogue">Télécharger le catalogue</a> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <a href="http://www.samsung.com/fr/theframe/shop/"><button class="fill--brown distrib" title="Ouvrir dans un nouvel onglet" data-omni-type="microsite_buyAction" data-omni="vd mkt page_the frame:spec:buy now_1|;the frame|UN55LS003AFXZA"><span class="cont">PRÉCOMMANDER</span></button></a>
+        <div class="page-navigation">
+            <nav>
+                <a href="../highlights.html" class="prev" data-omni="">
+                    <span>Précédent</span>
+                    <strong>Accueil</strong>
+                </a>            
+                <a href="../design.html" class="next" data-omni="">
+                    <span>Suivant</span>
+                    <strong>Design</strong>
+                </a>
+            </nav>
+        </div>
+    </section>
+
+      <!-- kv video popup -->
+      <div class="content_video_layer">
+        <div class="content">
+          <figure>
+            <video muted playsinline class="video-js vjs-default-skin" preload="auto" data-setup="{}">
+              <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.mp4" type="video/mp4">
+              <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.ogv" type="video/ogv">
+              <source src="//stg-images.samsung.com/is/content/samsung/p5/fr/tvs/theframe/content/videos/frame_content_kv_video.webm" type="video/webm">
+            </video>
+            <figcaption>La vidéo montre The Frame dans différentes dispositions : accroché à un mur de cuisine, sur une étagère dans un salon ou sur son pied Stand.</figcaption>
+          </figure>
+
+          <a class="close" href="#" title="video_close">Fermer</a>
+        </div>
+      </div>
+      <!-- // kv video popup -->
+
+    </div>
+<!-- //@Body(HTML) -->
+  </div>
+
+    <!--/* login layer popup (for wave1) */-->
+
+    <div class="layer_popup" id="loginLayerPopup">
+       
+    </div>
+
+    <!--/* dimmed (for wave1) */-->
+<!--    <div id="dimContainer"><div class="lightbox-skrim" style="display : none; "></div></div>-->
+<!-- @Footer (HTML) -->
+  <footer id="footer" role="contentinfo">
+    <!--googleoff: all-->
+    <div class="gb-legal">
+      <div class="gb-legal__inner">
+        <div class="gb-legal__inner-wrap gb-legal__inner-wrap__col1"><!-- [D] If this has one column, add '.gb-legal__inner-wrap__col1' class -->
+          <!-- <div class="gb-legal__column disclaimerBox">
+            We don't need to display this disclaimer <a href="#"> We don't need to display this disclaimer</a> We don't need to display this disclaimer <a href="#"> We don't need to display this disclaimer </a> We don't need to display this disclaimer <br>
+            <br>
+            We don't need to display this disclaimer
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!--googleon: all-->
+  </footer>
+<!-- @Footer (HTML) -->
+</div>
+
+
+
+
+
+<!--/* temporary js */-->
+<script type="text/javascript">
+
+  // $(".gb-gnb__search-input").keydown(function(e){
+
+  //   var keyCode = e.keyCode || e.which;
+  //   if(keyCode === 9) return;
+
+  //   $(".gb-gnb__search-suggest").show();
+  // })
+
+</script>
+
+</div>
+<!-- endsmoosh -->
+<!-- smoosh -->
+<!-- build:js /scripts/design.js -->
+<script src="scripts/content.js"></script>
+<!-- endbuild -->
+<!-- endsmoosh -->
+<!--<Deject>-->
+<!--#include virtual="/fr/next/html/static/static_p5_bottom.html"-->
+<!--</Deject>-->
+</body>
+</html>

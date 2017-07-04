@@ -2793,6 +2793,57 @@ html.ie8 .scroll-guide:after {
     <!--[if lt IE 9]>
         <script src="./common/js/modern.lib.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<style>
+.cc-window {
+    font-size: 13.5px !important;
+}
+.cc-color-override-1901237090.cc-window {
+background:#4b4c4c;
+  color:#FFF;
+}
+.cc-color-override-936484804 .cc-btn:hover, .cc-color-override-936484804 .cc-btn:focus{
+  background:#4b4c4c;
+}
+.cc-btn {
+  font-size: 1.2em !important;
+}
+.cc-color-override-936484804 .cc-link {
+  color: #FFF !important;
+  text-decoration: none;
+}
+.cc-banner .cc-message {
+    text-align: center !important;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+ "palette": {
+    "popup": {
+      "background": "#4b4c4c",
+      "text": "#cacaca",
+
+    },
+    "button": {
+      "background": "#4b4c4c",
+      "text": "#FFF",
+    }
+  },
+
+  "position": "bottom",
+
+  "content": {
+    "message": "Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.",
+    "dismiss": " X",
+    "link": "Vous pouvez en savoir plus ici",
+    'text': "#FFF",
+    "href": "http://www.samsung.com/fr/info/privacy/"
+  }
+})});
+</script>
+
 </head>
 <div class="cookie-warning"><!--/* [D] When GNB is open, add the class 'gb-gnb-open' to body tag -->
 <div id="wrap">
@@ -2806,15 +2857,15 @@ html.ie8 .scroll-guide:after {
     <div id="content" role="main">
 <!-- @Body(HTML) -->
 <!-- lnb -->
-<div class="sticky" style="position: fixed !important;padding: 0px 0;">
+<div class="sticky" style="position: fixed !important ;padding: 0px 0;">
   <div class="s-skip-content">
   <a href="#content" id="skipToContent">Skip to content</a>
 </div>
-<div class="cookie-notice js-cookie" id="hideme" role="status" style="position: relative !important; top: 0px !important; display:none;">
+<!-- <div class="cookie-notice js-cookie" id="hideme" role="status" style="position: relative !important; top: 0px !important; display:none;">
         <p class="cookie-notice__desc">Ce site utilise des cookies. En continuant à utiliser notre site, vous consentez à l'utilisation des cookies.</p>
         <a href="http://www.samsung.com/fr/info/privacy/" class="cookie-notice__link">Vous pouvez en savoir plus ici</a>
         <button type="button" class="cookie-notice__btn-close js-cookie-close">Fermer</button>
-    </div>
+    </div> -->
     <nav style="padding: 11px !important;">
         <h1 class="lnb-logo">
             <a href="./highlights.html" class="tf-logo " title="go to Highlights page" data-omnitag="h_the-frame"><img src="images/highlights/tf_logo.png" alt="The Frame Logo"></a>
