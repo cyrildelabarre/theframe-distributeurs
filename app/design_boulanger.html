@@ -800,60 +800,34 @@ $('.cc-compliance').click(addJsStats);
 
 <script src="scripts/design.js"></script>
 
-<input type="hidden" id="microsite" name="microsite" value="microsite"/>
-<input type="hidden" id="pid" name="pid" value="no"/ >
+
 
 
      <!-- SiteCatalyst code version: H.25.5.
     Copyright 1997-2008 Omniture, Inc. More info available at
     http://www.omniture.com -->
-  
- 
 
 
 
 
-
-
-
-
-   <script language="JavaScript" type="text/javascript" src="//www.samsung.com/fr/common/js/omni/s_code_micrositep4_v5.js"></script>
-                 
-
-    <script type="text/javascript" src="//www.samsung.com/fr/common/js/omni/s_code_fr_samsung_solution_adversitement_prod.js"></script>
-
-    
-
-<script language="JavaScript" type="text/javascript"><!--
-if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
-//-->
-<!-- </script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
-src="http://nmetrics.samsung.com/b/ss/sssamsung4fr/1/H.25.5--NS/0"
-height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
-<!-- End SiteCatalyst code version: H.25.5. -->
-
- 
-
-<script language="JavaScript" type="text/javascript" src="//www.samsung.com/fr/common/js/omni/aam_fr.js"></script>
-
-<script>
-  if(distributeur != 'boulanger'){
-               addJsStats();
-
-           }
+<script>    
+           if(dist != 'boulanger' || document.cookie.match(/^(.*;)?\s*cookieconsent_status\s*=\s*[^;]+(.*)?$/) != null) addJsStats();        
 
            function addJsStats(){
-               var filename = 'scripts/stats.js';
+               var link = document.createElement('link');
+               link.rel = 'import';
+               link.href = 'stats.html';            
+               document.body.appendChild(link);
+           }
+
+           function addJsFile(str){
+               var filename = str;
                var js = document.createElement('script');
                js.setAttribute("type","text/javascript");
                js.setAttribute("src", filename);
                document.getElementsByTagName("head")[0].appendChild(js);
-              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-48481369-1', 'auto', {
-        'cookieExpires': 60 * 60 * 24 * 30 * 13 // Time in seconds.
-    }); ga('send', 'pageview');}
-          
-           </script>
+           }              
+       </script>
 
 </body>
 </html>
